@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 1990fe2ce3da5dc4e9f37055ef35e553
+guid: 1dab4141eb8c967438e96b74046bb3d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4403809055945867661
-    second: enemy_follow_spritesheet_2_0
+      213: 8181593233396792789
+    second: enemy_follow_spritesheet_2_idle_0
   - first:
-      213: -7036500948588880346
-    second: enemy_follow_spritesheet_2_1
+      213: -7814068377574845056
+    second: enemy_follow_spritesheet_2_idle_1
   - first:
-      213: -1368770298229712798
-    second: enemy_follow_spritesheet_2_2
+      213: 4899806742123416820
+    second: enemy_follow_spritesheet_2_idle_2
   - first:
-      213: -615063355975441618
-    second: enemy_follow_spritesheet_2_3
+      213: 5157588994813131733
+    second: enemy_follow_spritesheet_2_idle_3
   - first:
-      213: 1091897408712943400
-    second: enemy_follow_spritesheet_2_4
+      213: -903876637433144820
+    second: enemy_follow_spritesheet_2_idle_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -113,97 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_follow_spritesheet_2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2560
-        width: 720
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96aec24bc874abd4c99e4f03789911b8
-      internalID: 4403809055945867661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_follow_spritesheet_2_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1920
-        width: 720
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 962c90e1c90c3304286b0598ab95f60b
-      internalID: -7036500948588880346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_follow_spritesheet_2_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1280
-        width: 720
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c69e6b6cea2185b47a96c94b37649702
-      internalID: -1368770298229712798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_follow_spritesheet_2_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 640
-        width: 720
-        height: 640
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fa4175268644c8409cde6adc7936530
-      internalID: -615063355975441618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_follow_spritesheet_2_4
+      name: enemy_follow_spritesheet_2_idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 720
-        height: 640
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,8 +127,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a86842d4668e03f4c85ff4294962ce76
-      internalID: 1091897408712943400
+      spriteID: 8e1c0cbd7cb1edc4a8f3a1ae0e097204
+      internalID: 8181593233396792789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_follow_spritesheet_2_idle_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264d636ca2615a0499b5b9181507cbd3
+      internalID: -7814068377574845056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_follow_spritesheet_2_idle_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8485fd6c85006b47a31d19ea76893a9
+      internalID: 4899806742123416820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_follow_spritesheet_2_idle_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de45a1dd6df2fd94499d3e152fbad9d4
+      internalID: 5157588994813131733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_follow_spritesheet_2_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237e75f47c02a274699609823d9450d4
+      internalID: -903876637433144820
       vertices: []
       indices: 
       edges: []

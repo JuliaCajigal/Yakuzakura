@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 
 public class Orbit : MonoBehaviour
 {
+    //Sonidos
     public AudioSource myAudio;
     public AudioClip coinSound;
     public AudioClip crashObject;
@@ -15,6 +16,8 @@ public class Orbit : MonoBehaviour
     public AudioClip getKeySound;
     public AudioClip ramenSound;
     public AudioClip deathEnemy;
+
+
     public GameObject anchorObject;
     public float speed;
     public bool orbiting;
@@ -25,6 +28,8 @@ public class Orbit : MonoBehaviour
     public Tilemap tilemap_obj;
     public Sprite standingSprite;
     public Sprite roundingSprite;
+
+    public bool makeSound;
 
 
 
@@ -83,6 +88,8 @@ public class Orbit : MonoBehaviour
                 PlayerPrefs.SetInt("farolillos", farolillo);
                 Player.score1 += 100;
                 myAudio.PlayOneShot(crashObject);
+                makeSound = true;
+                Invoke("RestartMakeSound", 1);
 
             }
             //PORTAESPADAS o FUENTE BAMBÚ
@@ -91,6 +98,8 @@ public class Orbit : MonoBehaviour
 
                 Player.score1 += 150;
                 myAudio.PlayOneShot(crashObject);
+                makeSound = true;
+                Invoke("RestartMakeSound", 1);
             }
             //BONSAI
             if (tilemap_obj.GetTile(tilePos).name == "tileset_Home_24" || tilemap_obj.GetTile(tilePos).name == "tileset_Garden_16")
@@ -99,6 +108,8 @@ public class Orbit : MonoBehaviour
                 PlayerPrefs.SetInt("bonsais", bonsai);
                 Player.score1 += 165;
                 myAudio.PlayOneShot(crashObject);
+                makeSound = true;
+                Invoke("RestartMakeSound", 1);
             }
 
             //MONEDA
@@ -165,6 +176,8 @@ public class Orbit : MonoBehaviour
 
                 tilemap_obj.SetTile(tilePos, null);
             }
+
+            //Reescanear para actualizar el grafo de A*
             AstarPath.active.Scan();
 
 
@@ -208,5 +221,10 @@ public class Orbit : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
     }
-    
+
+    private void RestartMakeSound()
+    {
+        makeSound = false;
+    }
+
 }

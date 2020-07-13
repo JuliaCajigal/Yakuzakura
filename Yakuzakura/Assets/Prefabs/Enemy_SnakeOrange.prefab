@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1782921717511798490}
   - component: {fileID: 1782921717511798491}
   - component: {fileID: 1782921717511798488}
+  - component: {fileID: 1737459348}
+  - component: {fileID: 1737459347}
   m_Layer: 0
   m_Name: Enemy_SnakeOrange
   m_TagString: Untagged
@@ -112,6 +114,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!58 &1737459348
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782921717511798492}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.8268172, y: 0}
+  serializedVersion: 2
+  m_Radius: 25.92865
+--- !u!114 &1737459347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782921717511798492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb24bb43374c9a542b278ec23a010096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3006667875829844789}
 --- !u!1001 &1782921717907343041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -129,6 +160,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_follow - Orange
       objectReference: {fileID: 0}
+    - target: {fileID: 3533040217451187700, guid: 4674a7fa8a503734cabf504b8f5b89c3,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 17465b4061437354ebf5e1b11d75a7f6, type: 2}
     - target: {fileID: 3533040217451187702, guid: 4674a7fa8a503734cabf504b8f5b89c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -207,6 +243,12 @@ PrefabInstance:
 --- !u!4 &3006667875829844791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3533040217451187702, guid: 4674a7fa8a503734cabf504b8f5b89c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1782921717907343041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3006667875829844789 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3533040217451187700, guid: 4674a7fa8a503734cabf504b8f5b89c3,
     type: 3}
   m_PrefabInstance: {fileID: 1782921717907343041}
   m_PrefabAsset: {fileID: 0}

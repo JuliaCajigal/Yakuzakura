@@ -7,6 +7,7 @@ using UnityEngine.Tilemaps;
 
 public class Orbit2 : MonoBehaviour
 {
+    //Sonidos
     public AudioSource myAudio;
     public AudioClip coinSound;
     public AudioClip girlHit;
@@ -15,6 +16,7 @@ public class Orbit2 : MonoBehaviour
     public AudioClip getKeySound;
     public AudioClip ramenSound;
     public GameObject anchorObject;
+
     public float speed;
     public bool orbiting;
     public Vector3 zAxis;
@@ -24,6 +26,8 @@ public class Orbit2 : MonoBehaviour
     public Tilemap tilemap_obj;
     public Sprite standingSprite;
     public Sprite roundingSprite;
+
+    public bool makeSound;
 
 
     // Start is called before the first frame update
@@ -75,6 +79,8 @@ public class Orbit2 : MonoBehaviour
                 PlayerPrefs.SetInt("farolillos", farolillo);
                 Player.score2 += 100;
                 myAudio.PlayOneShot(crashObject);
+                makeSound = true;
+                Invoke("RestartMakeSound", 1);
 
             }
             //PORTAESPADAS o FUENTE BAMBÚ
@@ -82,6 +88,8 @@ public class Orbit2 : MonoBehaviour
             {
                 myAudio.PlayOneShot(crashObject);
                 Player.score2 += 150;
+                makeSound = true;
+                Invoke("RestartMakeSound", 1);
             }
             //BONSAI
             if (tilemap_obj.GetTile(tilePos).name == "tileset_Home_24" || tilemap_obj.GetTile(tilePos).name == "tileset_Garden_16")
@@ -90,6 +98,8 @@ public class Orbit2 : MonoBehaviour
                 PlayerPrefs.SetInt("bonsais", bonsai);
                 myAudio.PlayOneShot(crashObject);
                 Player.score2 += 165;
+                makeSound = true;
+                Invoke("RestartMakeSound", 1);
             }
 
             //MONEDA
@@ -156,6 +166,9 @@ public class Orbit2 : MonoBehaviour
                 tilemap_obj.SetTile(tilePos, null);
             }
 
+            //Reescanear para actualizar el grafo de A*
+            AstarPath.active.Scan();
+
         }
 
         if (collision.gameObject.tag == "EnemyFollower")
@@ -180,6 +193,12 @@ public class Orbit2 : MonoBehaviour
     
     transform.RotateAround(anchorObject.transform.position, zAxis, speed * Time.deltaTime);
     }
+
+    private void RestartMakeSound()
+    {
+        makeSound = false;
+    }
+
 
 
 }

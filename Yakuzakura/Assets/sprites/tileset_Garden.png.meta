@@ -1,0 +1,957 @@
+fileFormatVersion: 2
+guid: 6f2398a07ba525b4ea2803f2d3ec0181
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2801515709934084802
+    second: tileset_Garden_0
+  - first:
+      213: -1679085489487184467
+    second: tileset_Garden_1
+  - first:
+      213: 871055087232800314
+    second: tileset_Garden_2
+  - first:
+      213: -6069904596703928710
+    second: tileset_Garden_3
+  - first:
+      213: -7928550630650895224
+    second: tileset_Garden_4
+  - first:
+      213: 2281012588997726511
+    second: tileset_Garden_5
+  - first:
+      213: -6126007757979005511
+    second: tileset_Garden_6
+  - first:
+      213: 3383772509021873834
+    second: tileset_Garden_7
+  - first:
+      213: -419210437085143661
+    second: tileset_Garden_8
+  - first:
+      213: -5580137562006778228
+    second: tileset_Garden_9
+  - first:
+      213: -1561512022272962927
+    second: tileset_Garden_10
+  - first:
+      213: 8549753695516253830
+    second: tileset_Garden_11
+  - first:
+      213: -66433340954349584
+    second: tileset_Garden_12
+  - first:
+      213: 3506306375724259192
+    second: tileset_Garden_13
+  - first:
+      213: 3561863457560604799
+    second: tileset_Garden_14
+  - first:
+      213: -5476708346537011588
+    second: tileset_Garden_15
+  - first:
+      213: 1292251949437946808
+    second: tileset_Garden_16
+  - first:
+      213: -5249175165272691315
+    second: tileset_Garden_17
+  - first:
+      213: -2612913482421465735
+    second: tileset_Garden_18
+  - first:
+      213: 6769171764992506186
+    second: tileset_Garden_19
+  - first:
+      213: 2325237177987991357
+    second: tileset_Garden_20
+  - first:
+      213: 8526449638353020038
+    second: tileset_Garden_21
+  - first:
+      213: -4125065424554016679
+    second: tileset_Garden_22
+  - first:
+      213: -8331792924680225012
+    second: tileset_Garden_23
+  - first:
+      213: -8820208590531623564
+    second: tileset_Garden_24
+  - first:
+      213: 3334843797628784862
+    second: tileset_Garden_25
+  - first:
+      213: 7671195705698711292
+    second: tileset_Garden_26
+  - first:
+      213: -5336163579490973312
+    second: tileset_Garden_27
+  - first:
+      213: 5118859192532665034
+    second: tileset_Garden_28
+  - first:
+      213: -848075971180963847
+    second: tileset_Garden_29
+  - first:
+      213: 3906930615499768592
+    second: tileset_Garden_30
+  - first:
+      213: -4869716633116730157
+    second: tileset_Garden_31
+  - first:
+      213: -1005152797125479086
+    second: tileset_Garden_32
+  - first:
+      213: 6605254695690687174
+    second: tileset_Garden_33
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tileset_Garden_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1844
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682df5a7c7f599749b12b168534089cf
+      internalID: 2801515709934084802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1844
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b0db96199f5ba47a1f463093d224af
+      internalID: -1679085489487184467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1844
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -126, y: -119}
+        - {x: -126, y: 115}
+        - {x: -100, y: 115}
+        - {x: -100, y: -119}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c939ec39f426d843915f0d702b550e6
+      internalID: 871055087232800314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1844
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 99.464966, y: -118.58716}
+        - {x: 99.464966, y: 121.74585}
+        - {x: 125.695984, y: 121.74585}
+        - {x: 125.695984, y: -118.58716}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c0d30828b48f24e95c9b127f7cedf3
+      internalID: -6069904596703928710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1844
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63e16e8b1eac7946b944f9c77c58173
+      internalID: -7928550630650895224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_5
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1844
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1a4000e25ba7243b7cdab62e2dd9c2
+      internalID: 2281012588997726511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_6
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1844
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652395ffe44433f4b9415ba90b273481
+      internalID: -6126007757979005511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1588
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc97864c0a1bc944ae0acbb0a04b942
+      internalID: 3383772509021873834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1588
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c40e10df4f76ec458801bfc1ac061fe
+      internalID: -419210437085143661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1588
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799ab7cbac32048439b51370a3ef66d4
+      internalID: -5580137562006778228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1588
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e0c5f4378faf54a8ef7e4d9f84b6e0
+      internalID: -1561512022272962927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1588
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d48a76c15ac7b4b98e549ca1fa12f7
+      internalID: 8549753695516253830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_12
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1588
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38aee2d7bf0e8b14280ce82aa250375b
+      internalID: -66433340954349584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1588
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8b8f52878dbb8458481ea17ae966d5
+      internalID: 3506306375724259192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1588
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d8bd7b8e741ff45ae2c6e7d7c4a002
+      internalID: 3561863457560604799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1332
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -43, y: -58}
+        - {x: -43, y: 30}
+        - {x: 42, y: 30}
+        - {x: 42, y: -58}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a39d85df53af2d439cdec9e6b420c0d
+      internalID: -5476708346537011588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1332
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -58, y: -62}
+        - {x: -58, y: 41}
+        - {x: 39, y: 42}
+        - {x: 37, y: -63}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a16f0b792ca76d4d83c8a4f87a1fae3
+      internalID: 1292251949437946808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_17
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1332
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -61, y: -62}
+        - {x: -60, y: 55}
+        - {x: 58, y: 54}
+        - {x: 58, y: -62}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1703b3bb6a8e0438f4425d499b8c4f
+      internalID: -5249175165272691315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1332
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -61, y: -66}
+        - {x: -61, y: 50}
+        - {x: 69, y: 50}
+        - {x: 69, y: -66}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3da56a1f12d0e40b4031b3ef10d65e
+      internalID: -2612913482421465735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_19
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1332
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1b9e4894ddbaa479be26b5edbcb924
+      internalID: 6769171764992506186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_20
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1332
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b9f711a915e9149ace9c7cd72979b5
+      internalID: 2325237177987991357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_21
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1332
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f22fbc6fd073743bfd8e6d6b7ceb12
+      internalID: 8526449638353020038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1076
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: -40}
+        - {x: -50, y: 38}
+        - {x: 57, y: 38}
+        - {x: 57, y: -40}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd92abaf94c8e14e807600811cbe01d
+      internalID: -4125065424554016679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_23
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1076
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -58, y: -44}
+        - {x: -58, y: 33}
+        - {x: 55, y: 33}
+        - {x: 55, y: -44}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5444589cd5a5d94389def8315249b4e
+      internalID: -8331792924680225012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_24
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1076
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -72}
+        - {x: -51, y: -56}
+        - {x: -59, y: 33}
+        - {x: 0, y: 48}
+        - {x: 53, y: 33}
+        - {x: 49, y: -63}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cd81364847d1b4083a7154ec38ee90
+      internalID: -8820208590531623564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_25
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1076
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211d30ea5f2454249b4e1e2adc53c0bd
+      internalID: 3334843797628784862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_26
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1076
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893dab9db4daa2f49af503a3188dfd79
+      internalID: 7671195705698711292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_27
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 820
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec4e64f9713d734aaf50e3d9c3fc224
+      internalID: -5336163579490973312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_28
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 820
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcbf0a03eb8f434ea1288d281977fac
+      internalID: 5118859192532665034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_29
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 820
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddc2277ef0392346a60d6418018f8a3
+      internalID: -848075971180963847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 564
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120263ceafcc1194dad4f59c98799046
+      internalID: 3906930615499768592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_31
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 564
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a2f18f96918fe4589dc288a1420f58
+      internalID: -4869716633116730157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_32
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 564
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d68cd7540e611a48a47189b1f9851c1
+      internalID: -1005152797125479086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_Garden_33
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 308
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c82b5f97018e0547bc85e61ee7d5dca
+      internalID: 6605254695690687174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d2350ea1dd39ad74ea2b8617b77812b1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Old Japanese
+  fontNames:
+  - Old Japanese
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f27d43daaa8dd094482756c487d6ff78, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,6 +9,8 @@ TagManager:
   - EnemyShooter
   - Enemy
   - EnemyFollower
+  - bullet
+  - Players
   layers:
   - Default
   - TransparentFX

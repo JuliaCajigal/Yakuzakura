@@ -35,6 +35,7 @@ public class bullet : MonoBehaviour
         {
             if (collision.gameObject.tag != "EnemyShooter")
             {
+                Debug.Log(collision.gameObject.tag);
                 explode = true;
                 moveSpeed = 0;
                 move();

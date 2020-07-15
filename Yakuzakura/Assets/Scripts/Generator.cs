@@ -38,6 +38,7 @@ public class Generator : MonoBehaviour
     public int numObj_cel;
     public int numEneF_cel;
     public int numEneS_cel;
+    public int numEneSam_cel;
     private int rand1;
     private int rand2;
 
@@ -45,8 +46,12 @@ public class Generator : MonoBehaviour
     private List<int[]> leavesRooms = new List<int[]>();
     private List<TileBase> objectList = new List<TileBase>();
 
+    //Enemigos
     public GameObject enemy_follow;
     public GameObject enemy_shooter;
+    public GameObject enemy_samurai;
+    public GameObject GuidePoint;
+
 
 
     // Start is called before the first frame update
@@ -55,7 +60,6 @@ public class Generator : MonoBehaviour
 
         generateDungeon();
         fillObjectList();
-        changeTiles();
         spawnObjects();
 
 
@@ -65,11 +69,6 @@ public class Generator : MonoBehaviour
     void Update()
     {
  
-    }
-
-    private void changeTiles()
-    {
-
     }
 
     //Generate dungeon
@@ -210,7 +209,7 @@ public class Generator : MonoBehaviour
     {
 
 
-
+        //ENEMIGOS SERPIENTE
         for (int obj = 0; obj < numEneF_cel; obj++)
         {
             rand1 = rand.GetInt(1, width - 1);
@@ -224,12 +223,15 @@ public class Generator : MonoBehaviour
                 {
                     position = translatePositiontoWorldCell(coordinates, position);
                     Vector3 tilePos = tilemap_obj.CellToWorld(position);
+
                     if (spawnPositions != null)
                     {
                         if (!spawnPositions.Contains(position))
                         {
+ 
                             Instantiate<GameObject>(enemy_follow, tilePos, Quaternion.identity);
                             spawnPositions.Add(position);
+
                         }
                     }
                     else
@@ -246,7 +248,8 @@ public class Generator : MonoBehaviour
 
         }
 
-        for (int obj = 0; obj < numEneS_cel; obj++)
+        //ENEMIGOS DISPARADORES
+        for (int obj = 0; obj < numEneSam_cel; obj++)
         {
             rand1 = rand.GetInt(1, width - 1);
             rand2 = rand.GetInt(1, height - 1);
@@ -258,7 +261,7 @@ public class Generator : MonoBehaviour
                 
                 positionShooter = translatePositiontoWorldCell(coordinates, positionShooter);
                 Vector3 tilePos = tilemap_obj.CellToWorld(positionShooter);
-                tilemap_obj.GetSprite(positionShooter);
+                //tilemap_obj.GetSprite(positionShooter);
 
                 if (spawnPositions != null)
                 {
@@ -282,6 +285,100 @@ public class Generator : MonoBehaviour
             }
 
         }
+
+        
+        //ENEMIGOS SAMURAI
+        for (int obj = 0; obj < numEneSam_cel; obj++)
+        {
+            rand1 = rand.GetInt(1, width - 1);
+            rand2 = rand.GetInt(1, height - 1);
+            position = new Vector3Int(rand1, rand2, 0);
+
+
+            if (tilemap_obj.HasTile(position) == false)
+            {
+                if (coordinates[0] != 0 || coordinates[1] != 0)
+                {
+                    position = translatePositiontoWorldCell(coordinates, position);
+                    Vector3 tilePos = tilemap_obj.CellToWorld(position);
+
+                    //Cogemos coordenadas de la primera puerta de la sala
+                    Vector3Int positionDoor1 = translatePositiontoWorldCell(coordinates, new Vector3Int(5, 9, 0));
+                    Vector3 Door1Pos = tilemap_obj.CellToWorld(positionDoor1);
+
+                    //Cogemos coordenadas de la segunda puerta de la sala
+                    Vector3Int positionDoor2 = translatePositiontoWorldCell(coordinates, new Vector3Int(5, 1, 0));
+                    Vector3 Door2Pos = tilemap_obj.CellToWorld(positionDoor2);
+
+                    //Cogemos coordenadas de la tercera puerta de la sala
+                    Vector3Int positionDoor3 = translatePositiontoWorldCell(coordinates, new Vector3Int(8, 5 , 0));
+                    Vector3 Door3Pos = tilemap_obj.CellToWorld(positionDoor3);
+
+                    //Cogemos coordenadas de la cuarta puerta de la sala
+                    Vector3Int positionDoor4 = translatePositiontoWorldCell(coordinates, new Vector3Int(1, 5, 0));
+                    Vector3 Door4Pos = tilemap_obj.CellToWorld(positionDoor4);
+
+                    if (spawnPositions != null)
+                    {
+                        if (!spawnPositions.Contains(position))
+                        {
+
+                            GameObject newSamurai = Instantiate<GameObject>(enemy_samurai, tilePos, Quaternion.identity);
+                            GameObject SamuraiSprite = newSamurai.transform.GetChild(1).gameObject;
+                            SamuraiBehaviour newBehaviour = SamuraiSprite.GetComponent<SamuraiBehaviour>();
+
+                            //Asignamos al Samurai los puntos guia de las puertas de su sala
+                            //Puerta Norte
+                            GameObject DoorPoint = Instantiate<GameObject>(GuidePoint, Door1Pos, Quaternion.identity);
+                            newBehaviour.targetDoor = DoorPoint.transform;
+                            newBehaviour.target = DoorPoint.transform;
+                            //Puerta Sur
+                            GameObject DoorPoint2 = Instantiate<GameObject>(GuidePoint, Door2Pos, Quaternion.identity);
+                            newBehaviour.targetDoor2 = DoorPoint2.transform;
+                            //Puerta Este
+                            GameObject DoorPoint3 = Instantiate<GameObject>(GuidePoint, Door3Pos, Quaternion.identity);
+                            newBehaviour.targetDoor3 = DoorPoint3.transform;
+                            //Puerta Oeste
+                            GameObject DoorPoint4 = Instantiate<GameObject>(GuidePoint, Door4Pos, Quaternion.identity);
+                            newBehaviour.targetDoor4 = DoorPoint4.transform;
+
+                            spawnPositions.Add(position);
+
+                        }
+                    }
+                    else
+                    {
+                        GameObject newSamurai = Instantiate<GameObject>(enemy_samurai, tilePos, Quaternion.identity);
+                        GameObject SamuraiSprite = newSamurai.transform.GetChild(1).gameObject;
+                        SamuraiBehaviour newBehaviour = SamuraiSprite.GetComponent<SamuraiBehaviour>();
+
+                        //Asignamos al Samurai los puntos guia de las puertas de su sala
+                        //Puerta Norte
+                        GameObject DoorPoint = Instantiate<GameObject>(GuidePoint, Door1Pos, Quaternion.identity);
+                        newBehaviour.targetDoor = DoorPoint.transform;
+                        newBehaviour.target = DoorPoint.transform;
+                        //Puerta Sur
+                        GameObject DoorPoint2 = Instantiate<GameObject>(GuidePoint, Door2Pos, Quaternion.identity);
+                        newBehaviour.targetDoor2 = DoorPoint2.transform;
+                        //Puerta Este
+                        GameObject DoorPoint3 = Instantiate<GameObject>(GuidePoint, Door3Pos, Quaternion.identity);
+                        newBehaviour.targetDoor3 = DoorPoint3.transform;
+                        //Puerta Oeste
+                        GameObject DoorPoint4 = Instantiate<GameObject>(GuidePoint, Door4Pos, Quaternion.identity);
+                        newBehaviour.targetDoor4 = DoorPoint4.transform;
+
+                        spawnPositions.Add(position);
+                    }
+                }
+                else
+                {
+
+                }
+            }
+
+        }
+
+
     }
 
     private Vector3Int translatePositiontoWorldCell(int[] coordinates, Vector3Int pos)

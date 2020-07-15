@@ -11,6 +11,7 @@ TagManager:
   - EnemyFollower
   - bullet
   - Players
+  - EnemySamurai
   layers:
   - Default
   - TransparentFX

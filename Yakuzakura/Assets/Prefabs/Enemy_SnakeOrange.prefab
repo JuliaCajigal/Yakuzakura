@@ -171,6 +171,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_follow - Orange
       objectReference: {fileID: 0}
+    - target: {fileID: 3533040217451187699, guid: 4674a7fa8a503734cabf504b8f5b89c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3533040217451187700, guid: 4674a7fa8a503734cabf504b8f5b89c3,
         type: 3}
       propertyPath: m_Controller

@@ -4674,6 +4674,8 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
+  samurai: {fileID: 0}
+  attacking: 0
 --- !u!213 &361201610
 Sprite:
   m_ObjectHideFlags: 0

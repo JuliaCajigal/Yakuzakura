@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 4375195372376851188}
   - component: {fileID: -7152155831281892443}
   - component: {fileID: 2614664207513575711}
+  - component: {fileID: 6720710972968513195}
   m_Layer: 0
   m_Name: Enemy_Samurai
   m_TagString: EnemySamurai
@@ -254,6 +255,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   visiblePlayer: []
+  samurai: {fileID: 0}
 --- !u!114 &-7152155831281892443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +292,8 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
+  samurai: {fileID: 0}
+  attacking: 0
 --- !u!50 &2614664207513575711
 Rigidbody2D:
   serializedVersion: 4
@@ -311,6 +315,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6720710972968513195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4375195372376851186}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482ba41857792324681d2ac727a4efe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  samurai: {fileID: 0}
+  samuraiAStar: {fileID: 0}
+  moveVector: {x: 0, y: 0, z: 0}
+  targetPlayer: {fileID: 0}
+  rb: {fileID: 0}
+  speed: 100
 --- !u!1 &4375195372829876242
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,16 +428,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86dbc6688c409e94b89d43134d66f92f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   target: {fileID: 0}
   patrolling: 0
   chasing: 0
   attacking: 0
-  stunned: 0
   targetDoor: {fileID: 0}
   targetDoor2: {fileID: 0}
   targetDoor3: {fileID: 0}
   targetDoor4: {fileID: 0}
+  targetPlayer: {fileID: 0}
   Astar: {fileID: 0}
+  WalkBack: {fileID: 0}
 --- !u!95 &4375195372829876245
 Animator:
   serializedVersion: 3

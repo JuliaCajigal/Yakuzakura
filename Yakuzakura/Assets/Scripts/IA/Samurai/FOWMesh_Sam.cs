@@ -16,6 +16,7 @@ public class FOWMesh_Sam : MonoBehaviour
 
 
 
+
     void Start()
     {
         mesh = GetComponent<MeshFilter>().mesh;
@@ -41,8 +42,12 @@ public class FOWMesh_Sam : MonoBehaviour
 
         for (int i = 0; i <= stepCount; i ++)
         {
-            float angle = fow.transform.eulerAngles.y - fow.viewAngle / 2 + stepAngle * i;
+            float angle = (fow.transform.eulerAngles.y - fow.viewAngle / 2 + stepAngle * i) + 90;
             Vector3 dir = fow.DirFromAngle(angle, false);
+
+
+
+
             hit = Physics2D.Raycast(fow.transform.position, dir, fow.viewRadius, fow.obstacleMask);
             if(hit.collider == null)
             {
@@ -85,17 +90,17 @@ public class FOWMesh_Sam : MonoBehaviour
 
     private void Update()
     {
-        /*
-        if(fow.shooter.shooting == true)
+        
+        if(fow.samurai.chasing == true || fow.samurai.patrolling==false)
         {
             GetComponentInParent<MeshRenderer>().material = redCone;
 
         }
 
-        if(fow.shooter.patrolling == true)
+        if(fow.samurai.patrolling == true)
         {
             GetComponentInParent<MeshRenderer>().material = greenCone;
         }
-        */
+        
     }
 }

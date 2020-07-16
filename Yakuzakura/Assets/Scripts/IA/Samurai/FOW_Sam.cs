@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class FOW_Sam : MonoBehaviour
 {
@@ -14,10 +15,12 @@ public class FOW_Sam : MonoBehaviour
     Collider2D[] playerInRadius;
     public LayerMask obstacleMask, playerMask,enemiesMask;
     public List<Transform> visiblePlayer = new List<Transform>();
+    public SamuraiBehaviour samurai;
 
     private void Start()
     {
-        //samurai = GetComponent<SamuraiBehaviour>();
+
+        samurai = GetComponentInChildren<SamuraiBehaviour>();
     }
 
     void FixedUpdate()
@@ -27,14 +30,15 @@ public class FOW_Sam : MonoBehaviour
 
     void FindVisiblePlayer()
     {
-       playerInRadius = Physics2D.OverlapCircleAll(transform.position, viewRadius);
+       playerInRadius = Physics2D.OverlapCircleAll(transform.position , viewRadius);
 
         visiblePlayer.Clear();
 
         for(int i = 0; i<playerInRadius.Length; i++)
         {
             Transform player = playerInRadius[i].transform;
-            Vector2 dirPlayer = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
+            Vector2 dirPlayer = new Vector2((player.position.x - transform.position.x) + 1, (player.position.y - transform.position.y) + 1);
+            dirPlayer = Rotate(dirPlayer, -90);
 
             if(Vector2.Angle(dirPlayer, transform.right) < viewAngle/2)
             {
@@ -45,8 +49,9 @@ public class FOW_Sam : MonoBehaviour
                     visiblePlayer.Add(player);
                     if(playerInRadius[i].gameObject.tag=="Player1" || playerInRadius[i].gameObject.tag == "Player2")
                     {
-                        //shooter.patrolling = false;
-                        //shooter.shooting = true;
+
+                        samurai.patrolling = false;
+                        samurai.chasing = true;
                     }
 
                 }
@@ -60,8 +65,22 @@ public class FOW_Sam : MonoBehaviour
     {
         if(!global)
         {
-            angleDeg += transform.eulerAngles.z + 90;
+            angleDeg += transform.eulerAngles.z ;
         }
         return new Vector2(Mathf.Cos(angleDeg * Mathf.Deg2Rad), Mathf.Sin(angleDeg * Mathf.Deg2Rad));
     }
+
+  
+   public Vector2 Rotate(Vector2 v, float degrees)
+        {
+            float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);
+            float cos = Mathf.Cos(degrees * Mathf.Deg2Rad);
+
+            float tx = v.x;
+            float ty = v.y;
+            v.x = (cos * tx) - (sin * ty);
+            v.y = (sin * tx) + (cos * ty);
+            return v;
+        }
+    
 }

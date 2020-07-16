@@ -8,17 +8,20 @@ public class AstarSamurai : AIPath
 {
 
 
-    SamuraiBehaviour samurai;
+    public SamuraiBehaviour samurai;
     System.Random rnd = new System.Random();
+    public bool attacking;
 
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        attacking = true;
         samurai = GetComponentInChildren<SamuraiBehaviour>();
+
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
@@ -28,25 +31,53 @@ public class AstarSamurai : AIPath
    public override void OnTargetReached()
     {
 
-        int n = rnd.Next(0, 4);
-
-        Debug.Log("NUMERO RANDOM: " + n);
-        switch (n)
+        //PATRULLAR - Cambia de objetivo aleatorio entre las puertas
+        //de la sala, cuando ya ha alcanzado una
+        if (samurai.patrolling == true)
         {
-            case 0:
-                samurai.target = samurai.targetDoor;
-                break;
-            case 1:
-                samurai.target = samurai.targetDoor2;
-                break;
-            case 2:
-                samurai.target = samurai.targetDoor3;
-                break;
-            case 3:
-                samurai.target = samurai.targetDoor4;
-                break;
+            int n = rnd.Next(0, 4);
+
+            Debug.Log("NUMERO RANDOM: " + n);
+            switch (n)
+            {
+                case 0:
+                    samurai.target = samurai.targetDoor;
+                    break;
+                case 1:
+                    samurai.target = samurai.targetDoor2;
+                    break;
+                case 2:
+                    samurai.target = samurai.targetDoor3;
+                    break;
+                case 3:
+                    samurai.target = samurai.targetDoor4;
+                    break;
+            }
+
         }
 
-        //samurai.target = samurai.targetDoor2;
+        //PERSEGUIR - Si el Samurai está en modo perseguir y llega a su
+        //objetivo, realiza la animación de atacar y se activa el modo
+        //RETROCEDER
+        if (samurai.chasing == true)
+        {
+
+                samurai.animator.SetTrigger("ONEATTACK");
+                samurai.Astar.enabled = false;
+                //Se activa el Script que tiene el modo RETROCEDER
+                samurai.WalkBack.enabled = true;
+                Player.health2 -= 5;
+
+
+        }
+ 
+
+
+    }
+
+    public void stopAttacking()
+    {
+
+        samurai.animator.SetBool("ATTACK", false);
     }
 }

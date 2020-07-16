@@ -203,6 +203,18 @@ public class Orbit : MonoBehaviour
             Destroy(collision.gameObject.transform.parent.gameObject);
         }
 
+        //ENEMIGO SAMURAI
+        if (collision.gameObject.tag == "EnemySamurai")
+        {
+            if (orbiting == true)
+            {
+                myAudio.PlayOneShot(slash);
+                Player.score1 += 435;
+                Destroy(collision.gameObject);
+                Destroy(collision.gameObject.transform.parent.gameObject);
+            }
+        }
+
     }
  
     void OrbitAround()

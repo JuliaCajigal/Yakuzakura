@@ -12,6 +12,7 @@ TagManager:
   - bullet
   - Players
   - EnemySamurai
+  - Sumo
   layers:
   - Default
   - TransparentFX

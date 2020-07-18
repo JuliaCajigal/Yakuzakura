@@ -27421,7 +27421,7 @@ RectTransform:
   - {fileID: 708330874}
   - {fileID: 151399653}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -30890,7 +30890,7 @@ MonoBehaviour:
   numEneF_cel: 2
   numEneS_cel: 2
   numEneSam_cel: 1
-  enemy_follow: {fileID: 1782921717511798492, guid: cb52a2c51cabc3543a6988b25312429c,
+  enemy_follow: {fileID: 7337775662572762588, guid: e434e8894ca03ee48b4b5b983cf8539a,
     type: 3}
   enemy_shooter: {fileID: 2354879150284450084, guid: c2b28211018bd2441a0cca5d99f8a19e,
     type: 3}
@@ -34989,7 +34989,7 @@ Transform:
   m_Children:
   - {fileID: 882303798}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1787719941
 MonoBehaviour:
@@ -39817,7 +39817,7 @@ PrefabInstance:
     - target: {fileID: 4375195372376851185, guid: db89659b45ea07244a278dbad86aac6b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4375195372376851185, guid: db89659b45ea07244a278dbad86aac6b,
         type: 3}
@@ -40115,7 +40115,7 @@ PrefabInstance:
     - target: {fileID: 811436575942619134, guid: 8f63cb7a56f4dfa4daacfc79491093e6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 811436575942619134, guid: 8f63cb7a56f4dfa4daacfc79491093e6,
         type: 3}

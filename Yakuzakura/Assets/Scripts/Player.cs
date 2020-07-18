@@ -133,4 +133,9 @@ public class Player : MonoBehaviour
             
         }
     }
+
+    public void pushBack()
+    {
+        //metodo empujar
+    }
 }

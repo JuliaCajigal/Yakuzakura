@@ -21,6 +21,7 @@ public class Boss_idle2 : StateMachineBehaviour
         rb = animator.GetComponent<Rigidbody2D>();
         boss = animator.GetComponent<Boss>();
 
+        attackDelay = 5f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -40,6 +41,7 @@ public class Boss_idle2 : StateMachineBehaviour
 
         if (attackDelay <= 0f)
         {
+            Debug.Log("----------------------DELAY ATAQUE JUMP" + attackDelay);
             animator.SetTrigger("Jump");
             boss.phaseTwo();
             attackDelay = 5f;
@@ -52,7 +54,7 @@ public class Boss_idle2 : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Push");
-        animator.ResetTrigger("Jump");
+        //animator.ResetTrigger("Jump");
     }
 
 }

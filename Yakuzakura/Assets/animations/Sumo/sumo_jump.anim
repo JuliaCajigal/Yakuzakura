@@ -3159,7 +3159,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3169,7 +3169,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3179,7 +3179,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3189,7 +3189,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3199,7 +3199,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3209,37 +3209,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0011_MUSLO_L/SUMO_0012_GEMELO_L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0011_MUSLO_L/SUMO_0012_GEMELO_L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0011_MUSLO_L/SUMO_0012_GEMELO_L
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3309,6 +3279,66 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
+    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
     path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L
     classID: 4
     script: {fileID: 0}
@@ -3369,7 +3399,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3379,7 +3409,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3389,7 +3419,27 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: SUMO_0001_TORSO/SUMO_0011_MUSLO_L/SUMO_0012_GEMELO_L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: SUMO_0001_TORSO/SUMO_0011_MUSLO_L/SUMO_0012_GEMELO_L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3399,59 +3449,16 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
+    path: SUMO_0001_TORSO/SUMO_0011_MUSLO_L/SUMO_0012_GEMELO_L
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 1
+    functionName: phaseTwo
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

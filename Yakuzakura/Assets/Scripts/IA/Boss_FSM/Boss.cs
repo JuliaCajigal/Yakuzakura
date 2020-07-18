@@ -13,7 +13,7 @@ public class Boss : MonoBehaviour
 
     //Vida y barra de vida
     public Image healthBar;
-    public float maxHealth = 500f;
+    public float maxHealth = 100f;
     public static float sumo_health;
     public float timeDamage;
 
@@ -22,7 +22,7 @@ public class Boss : MonoBehaviour
     {
 
         anim = GetComponent<Animator>();
-        sumo_health = 500f;
+        sumo_health = 100f;
     }
 
     // Update is called once per frame
@@ -33,11 +33,13 @@ public class Boss : MonoBehaviour
 
         //Barra de vida
         healthBar.fillAmount = sumo_health / maxHealth;
+
+        Debug.Log(anim.GetInteger("Phase"));
     }
 
     public void phaseOne()
     {
-        anim.SetTrigger("Throw");
+        //anim.SetTrigger("Throw");
         Debug.Log("--------------------------------ATAQUE FASE UNO");
 
         Instantiate(shuriken, transform.position + new Vector3(-3, 0, -0.2f), Quaternion.identity);
@@ -48,10 +50,10 @@ public class Boss : MonoBehaviour
 
     public void phaseTwo()
     {
-        anim.SetTrigger("Jump");
+        //anim.SetTrigger("Jump");
         Debug.Log("--------------------------------ATAQUE FASE DOS");
 
-        Instantiate(wave, transform.position + new Vector3(0, 0, -0.2f), Quaternion.identity);
+        Instantiate(wave, transform.position + new Vector3(-0.5f, 0, -0.2f), Quaternion.identity);
 
 
     }
@@ -60,6 +62,10 @@ public class Boss : MonoBehaviour
     {
         anim.SetTrigger("Throw");
         Debug.Log("--------------------------------ATAQUE FASE TRES");
+
+        Instantiate(bomb, transform.position + new Vector3(-3, 0, -0.2f), Quaternion.identity);
+        Instantiate(bomb, transform.position + new Vector3(3, 0, -0.2f), Quaternion.identity);
+        Instantiate(bomb, transform.position + new Vector3(-3, 0, -0.2f), Quaternion.identity);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -75,12 +81,26 @@ public class Boss : MonoBehaviour
     {
         if (timeDamage <= 0f)
         {
+            Debug.Log("-------------------------------------------------------------------" + anim.GetInteger("Phase"));
+            Debug.Log(sumo_health);
+
+            anim.SetTrigger("Hit");
             sumo_health -= damage;
-            timeDamage = 1f;
+            timeDamage = 0.5f;
 
-            if (sumo_health <= 200)
+
+
+            if (sumo_health <= 0)
             {
-
+                anim.SetBool("Dead", true);
+            }
+            else if (sumo_health <= 30)
+            {
+                anim.SetInteger("Phase", 3);
+            }
+            else if (sumo_health <= 60)
+            {
+                anim.SetInteger("Phase", 2);
             }
 
         }

@@ -11,6 +11,7 @@ public class Boss_idle : StateMachineBehaviour
     GameObject player2;
     Rigidbody2D rb;
     Boss boss;
+    int phase;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -21,6 +22,8 @@ public class Boss_idle : StateMachineBehaviour
         rb = animator.GetComponent<Rigidbody2D>();
         boss = animator.GetComponent<Boss>();
 
+        attackDelay = 5f;
+        phase = animator.GetInteger("Phase");
         //Debug.Log(player1.position);
         //Debug.Log(rb.position);
     }
@@ -36,15 +39,30 @@ public class Boss_idle : StateMachineBehaviour
         {
             
             animator.SetTrigger("Push");
+       
         }
 
         attackDelay -= Time.deltaTime;
 
         if(attackDelay <= 0f)
         {
-            animator.SetTrigger("Throw");
-            boss.phaseOne();
-            attackDelay = 5f;
+            if (phase == 1)
+            {
+                animator.SetTrigger("Throw");
+                //boss.phaseOne();
+                
+            }
+            else if (phase == 2)
+            {
+                animator.SetTrigger("Jump");
+                //boss.phaseTwo();
+            }
+            else if (phase == 3)
+            {
+                animator.SetTrigger("ThrowRed");
+                boss.phaseThree();
+            }
+            attackDelay = 6f;
         }
         
         
@@ -55,6 +73,8 @@ public class Boss_idle : StateMachineBehaviour
     {
         animator.ResetTrigger("Push");
         animator.ResetTrigger("Throw");
+        animator.ResetTrigger("ThrowRed");
+        animator.ResetTrigger("Jump");
     }
 
 }

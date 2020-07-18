@@ -7,9 +7,9 @@ public class Circle_particles : MonoBehaviour
     public ParticleSystem ps;
     private float radius;
     private bool bigger;
-    float attackDelay;
     Player player;
     Boss boss;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,16 +17,14 @@ public class Circle_particles : MonoBehaviour
         ps = GetComponent<ParticleSystem>();
         radius = 0.05f;
         bigger = true;
-        attackDelay = 5f;
         player = GameObject.FindGameObjectWithTag("Players").GetComponent<Player>();
-        boss = GameObject.FindGameObjectWithTag("Players").GetComponent<Boss>();
+        boss = GameObject.FindGameObjectWithTag("Sumo").GetComponent<Boss>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-       
 
         if (bigger)
         {
@@ -43,24 +41,25 @@ public class Circle_particles : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
 
-        if (other.tag == "Player1")
+        if (other.tag == "Player2")
         {
             Debug.Log(other.tag);
             bigger = false;
-            player.takeDamage(1,10);
-            Destroy(gameObject);
 
         }
-        else if (other.tag == "Player2")
+        else if (other.tag == "Player1" && bigger)
         {
-            Debug.Log(other.tag);
-            bigger = false;
+            Debug.Log("-----------------------------------------PLYR2"+bigger);
+
+            player.takeDamage(1, 10);
+            Destroy(gameObject);
         }
 
         if (other.tag == "Sumo" && !bigger)
         {
-            Destroy(gameObject);
+            
             boss.takeDamage(50);
+            Destroy(gameObject, 0.4f);
         }
     }
 
@@ -74,10 +73,6 @@ public class Circle_particles : MonoBehaviour
     {
         var sh = ps.shape;
         sh.radius -= radius;
-
-        if (sh.radius <= 2)
-        {
-            //bigger = true;
-        }
     }
+
 }

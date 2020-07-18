@@ -40,6 +40,7 @@ public class Shuriken : MonoBehaviour
         //Ademas deja de poder hacerle daño al Chico
         if (collision.gameObject.tag == "Player2")
         {
+            Player.score2 += 200;
             againstPlayer = false;
             Astar.target = sumo.transform;
 

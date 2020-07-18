@@ -92,7 +92,7 @@ public class Bomb : MonoBehaviour
     {      
         if(collision.gameObject.tag == "Player2")
         {
-
+            Player.score2 += 200;
             Vector3 direction = -(transform.position - sumo.transform.position).normalized;
             rb.AddForce(direction * fuerza);
         }
@@ -106,6 +106,7 @@ public class Bomb : MonoBehaviour
 
         if(collision.gameObject.tag == "Sumo")
         {
+            Player.score2 += 200;
             Explode();
         }
     }

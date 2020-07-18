@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public Orbit2 object2;
     public static float health1;
     public static float health2;
+    public float timeDamage;
     public static int score1;
     public static int score2 ;
     public static bool gotKey;
@@ -51,6 +52,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Tiempo entre ataques, recibir daño una vez
+        timeDamage -= Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Escape)){
             PlayerPrefs.SetInt("ActualScore1", 0);
@@ -106,5 +109,28 @@ public class Player : MonoBehaviour
     void Death()
     {
         SceneManager.LoadScene("GameOver");
+    }
+
+    public void takeDamage(int pj, int damage)
+    {
+        Debug.Log("----------------------DAÑO");
+        Debug.Log(timeDamage);
+
+        if (timeDamage <= 0f)
+        {
+            timeDamage = 1f;
+
+            if (pj == 1)
+            {
+                health1 -= damage;
+                Debug.Log("----------------------DAÑO-----------------------");
+            }
+            else
+            {
+                health2 -= damage;
+            }
+
+            
+        }
     }
 }

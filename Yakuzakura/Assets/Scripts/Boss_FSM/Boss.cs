@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.iOS;
 using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
     Animator anim;
+    public GameObject wave;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +26,16 @@ public class Boss : MonoBehaviour
         anim.SetTrigger("Throw");
         Debug.Log("--------------------------------ATAQUE FASE UNO");
 
+        Instantiate(wave , transform.position + new Vector3(0,0,-0.2f), Quaternion.identity);
+
     }
 
     public void phaseTwo()
     {
         anim.SetTrigger("Jump");
         Debug.Log("--------------------------------ATAQUE FASE DOS");
+
+
     }
 
     public void phaseThree()

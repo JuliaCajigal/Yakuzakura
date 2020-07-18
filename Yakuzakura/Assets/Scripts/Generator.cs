@@ -61,6 +61,7 @@ public class Generator : MonoBehaviour
         generateDungeon();
         fillObjectList();
         spawnObjects();
+        Invoke("UpdateAstar", 1);
 
 
     }
@@ -249,7 +250,7 @@ public class Generator : MonoBehaviour
         }
 
         //ENEMIGOS DISPARADORES
-        for (int obj = 0; obj < numEneSam_cel; obj++)
+        for (int obj = 0; obj < numEneS_cel; obj++)
         {
             rand1 = rand.GetInt(1, width - 1);
             rand2 = rand.GetInt(1, height - 1);
@@ -439,7 +440,10 @@ public class Generator : MonoBehaviour
         
     }
 
-
+    private void UpdateAstar()
+    {
+        AstarPath.active.Scan();
+    }
 
 
 

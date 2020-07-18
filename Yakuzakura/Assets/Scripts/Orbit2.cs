@@ -139,7 +139,7 @@ public class Orbit2 : MonoBehaviour
                     myAudio.PlayOneShot(openDoor);
                     PlayerPrefs.SetInt("ActualScore1", Player.score1);
                     PlayerPrefs.SetInt("ActualScore2", Player.score2);
-                    SceneManager.LoadScene("Win");
+                    SceneManager.LoadScene("Boss");
                 }
 
             }

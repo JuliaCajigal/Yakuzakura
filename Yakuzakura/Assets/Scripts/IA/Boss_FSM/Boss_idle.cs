@@ -60,7 +60,7 @@ public class Boss_idle : StateMachineBehaviour
             else if (phase == 3)
             {
                 animator.SetTrigger("ThrowRed");
-                boss.phaseThree();
+                //boss.phaseThree();
             }
             attackDelay = 4f;
         }

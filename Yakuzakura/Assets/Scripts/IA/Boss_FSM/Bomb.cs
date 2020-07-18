@@ -15,6 +15,7 @@ public class Bomb : MonoBehaviour
     private GameObject sumo;
     private SpriteRenderer spriteR;
     private GameObject player1;
+    private GameObject player2;
     private Boss boss;
     public Sprite explodingSprite;
 
@@ -27,6 +28,7 @@ public class Bomb : MonoBehaviour
         sumo = GameObject.FindGameObjectWithTag("Sumo");
         boss = sumo.GetComponent<Boss>();
         player1 = GameObject.FindGameObjectWithTag("Player1");
+        player2 = GameObject.FindGameObjectWithTag("Player2");
         spriteR = GetComponentInChildren<SpriteRenderer>();
         
     }
@@ -71,6 +73,9 @@ public class Bomb : MonoBehaviour
         Vector3 directionPlayer = this.transform.position - player1.transform.position;
         var distancePlayer = directionPlayer.magnitude;
 
+        Vector3 directionPlayer2 = this.transform.position - player2.transform.position;
+        var distancePlayer2 = directionPlayer2.magnitude;
+
 
         if (distanceSumo <= 4)
         {
@@ -82,6 +87,13 @@ public class Bomb : MonoBehaviour
         {
             Player.health1 -= 10;
         }
+
+        if(distancePlayer2 <=4)
+        {
+            Player.health2 -= 10;
+        }
+
+
     
         Destroy(gameObject,0.3f);
     }

@@ -1,6 +1,6 @@
 ﻿                       using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.iOS;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +11,8 @@ public class Boss : MonoBehaviour
     public GameObject shuriken;
     public GameObject bomb;
     public CameraShake camShake;
+    System.Random rnd = new System.Random();
+    int numRnd;
 
     //Vida y barra de vida
     public Image healthBar;
@@ -55,7 +57,7 @@ public class Boss : MonoBehaviour
         //anim.SetTrigger("Jump");
         Debug.Log("--------------------------------ATAQUE FASE DOS");
 
-        Instantiate(wave, transform.position + new Vector3(-0.5f, 0, -0.2f), Quaternion.identity);
+        Instantiate(wave, transform.position + new Vector3(0f, -1, -0.2f), Quaternion.identity);
         StartCoroutine(camShake.Shake(.15f, .8f));
 
 
@@ -66,9 +68,26 @@ public class Boss : MonoBehaviour
         anim.SetTrigger("Throw");
         Debug.Log("--------------------------------ATAQUE FASE TRES");
 
-        Instantiate(bomb, transform.position + new Vector3(-3, 0, -0.2f), Quaternion.identity);
-        Instantiate(bomb, transform.position + new Vector3(3, 0, -0.2f), Quaternion.identity);
-        Instantiate(bomb, transform.position + new Vector3(-3, 0, -0.2f), Quaternion.identity);
+        numRnd = rnd.Next(-2,0);
+        //Bomba1
+        GameObject bomb1 = Instantiate(bomb, transform.position + new Vector3(-3, numRnd, -0.2f), Quaternion.identity);
+        Vector3 distanceBomb1 = (transform.position - bomb1.transform.position);
+        Rigidbody2D bomb1rb = bomb1.GetComponent<Rigidbody2D>();
+        bomb1rb.AddForce(-distanceBomb1 * 15);
+
+        numRnd = rnd.Next(-2,0);
+        //Bomba2
+        GameObject bomb2 = Instantiate(bomb, transform.position + new Vector3(3, numRnd, -0.2f), Quaternion.identity);
+        Vector3 distanceBomb2 = (transform.position - bomb2.transform.position);
+        Rigidbody2D bomb2rb = bomb2.GetComponent<Rigidbody2D>();
+        bomb2rb.AddForce(-distanceBomb2 * 15);
+
+        numRnd = rnd.Next(-1, 2);
+        //Bomba3
+        GameObject bomb3 = Instantiate(bomb, transform.position + new Vector3(numRnd, -3, -0.2f), Quaternion.identity);
+        Vector3 distanceBomb3 = (transform.position - bomb3.transform.position);
+        Rigidbody2D bomb3rb = bomb3.GetComponent<Rigidbody2D>();
+        bomb3rb.AddForce(-distanceBomb3 * 15);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

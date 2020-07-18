@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Circle_particles : MonoBehaviour
 {
+    public Animator anim;
     public ParticleSystem ps;
     private float radius;
     private bool bigger;
     Player player;
     Boss boss;
+   
 
 
     // Start is called before the first frame update
@@ -19,6 +21,7 @@ public class Circle_particles : MonoBehaviour
         bigger = true;
         player = GameObject.FindGameObjectWithTag("Players").GetComponent<Player>();
         boss = GameObject.FindGameObjectWithTag("Sumo").GetComponent<Boss>();
+        anim = boss.anim;
 
     }
 
@@ -57,8 +60,11 @@ public class Circle_particles : MonoBehaviour
 
         if (other.tag == "Sumo" && !bigger)
         {
+            if (anim.GetInteger("Phase") == 2)
+            {
+                boss.takeDamage(50);
+            }
             
-            boss.takeDamage(50);
             Destroy(gameObject, 0.4f);
         }
     }

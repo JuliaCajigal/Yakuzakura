@@ -22,7 +22,7 @@ public class Boss_idle : StateMachineBehaviour
         rb = animator.GetComponent<Rigidbody2D>();
         boss = animator.GetComponent<Boss>();
 
-        attackDelay = 5f;
+        attackDelay = 2f;
         phase = animator.GetInteger("Phase");
         //Debug.Log(player1.position);
         //Debug.Log(rb.position);
@@ -62,7 +62,7 @@ public class Boss_idle : StateMachineBehaviour
                 animator.SetTrigger("ThrowRed");
                 boss.phaseThree();
             }
-            attackDelay = 6f;
+            attackDelay = 4f;
         }
         
         

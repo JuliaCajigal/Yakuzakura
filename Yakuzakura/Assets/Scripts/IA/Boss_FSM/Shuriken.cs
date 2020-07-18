@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class Shuriken : MonoBehaviour
 {
-
+    public Animator anim;
     GameObject sumo;
     AIDestinationSetter Astar;
     Rigidbody2D rb;
@@ -20,6 +20,7 @@ public class Shuriken : MonoBehaviour
         againstPlayer = true;
         sumo = GameObject.FindGameObjectWithTag("Sumo");
         boss = sumo.GetComponent<Boss>();
+        anim = boss.anim;
         Astar = GetComponent<AIDestinationSetter>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player1");
@@ -59,7 +60,10 @@ public class Shuriken : MonoBehaviour
         {
             if (againstPlayer == false)
             {
-                boss.takeDamage(20);
+                if (anim.GetInteger("Phase") == 1)
+                {
+                    boss.takeDamage(20);
+                }
                 Destroy(gameObject);
             }
         }

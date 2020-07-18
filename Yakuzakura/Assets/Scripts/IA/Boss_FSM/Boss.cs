@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
-    Animator anim;
+    public Animator anim;
     public GameObject wave;
     public GameObject shuriken;
     public GameObject bomb;
+    public CameraShake camShake;
 
     //Vida y barra de vida
     public Image healthBar;
@@ -44,6 +45,7 @@ public class Boss : MonoBehaviour
 
         Instantiate(shuriken, transform.position + new Vector3(-3, 0, -0.2f), Quaternion.identity);
         Instantiate(shuriken, transform.position + new Vector3(3, 0, -0.2f), Quaternion.identity);
+        StartCoroutine(camShake.Shake(.15f, .8f));
 
 
     }
@@ -54,6 +56,7 @@ public class Boss : MonoBehaviour
         Debug.Log("--------------------------------ATAQUE FASE DOS");
 
         Instantiate(wave, transform.position + new Vector3(-0.5f, 0, -0.2f), Quaternion.identity);
+        StartCoroutine(camShake.Shake(.15f, .8f));
 
 
     }

@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     public GameObject key;
     public bool twoPlayers;
     public int numberOfPlayers;
+    Rigidbody2D rbplayer1;
+    Rigidbody2D rbplayer2;
 
 
     // Start is called before the first frame update
@@ -37,8 +39,10 @@ public class Player : MonoBehaviour
         gotKey = false;
         key.SetActive(false);
         numberOfPlayers = PlayerPrefs.GetInt("Players");
+        rbplayer1 = object1.GetComponent<Rigidbody2D>();
+        rbplayer2 = object2.GetComponent<Rigidbody2D>();
 
-        if(numberOfPlayers == 1)
+        if (numberOfPlayers == 1)
         {
             twoPlayers = false;
         }
@@ -54,6 +58,8 @@ public class Player : MonoBehaviour
     {
         //Tiempo entre ataques, recibir daño una vez
         timeDamage -= Time.deltaTime;
+
+        
 
         if (Input.GetKeyDown(KeyCode.Escape)){
             PlayerPrefs.SetInt("ActualScore1", 0);
@@ -136,6 +142,11 @@ public class Player : MonoBehaviour
 
     public void pushBack()
     {
-        //metodo empujar
+
+        rbplayer1.AddForce(Vector2.down * 3000);
+        rbplayer2.AddForce(Vector2.down * 3000);
+
     }
+
+
 }

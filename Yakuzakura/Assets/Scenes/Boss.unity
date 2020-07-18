@@ -639,6 +639,21 @@ PrefabInstance:
       propertyPath: tilemap_obj
       value: 
       objectReference: {fileID: 1530406358}
+    - target: {fileID: 5259713367414145765, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: distance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713367414145769, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713367414145769, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5259713367414145770, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
         type: 3}
       propertyPath: m_Offset.y
@@ -693,6 +708,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713368166011534, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713368166011534, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713368166011534, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59, type: 3}

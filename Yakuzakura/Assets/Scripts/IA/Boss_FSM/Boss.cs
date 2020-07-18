@@ -10,6 +10,8 @@ public class Boss : MonoBehaviour
     public GameObject wave;
     public GameObject shuriken;
     public GameObject bomb;
+    public GameObject player;
+    public Player players;
     public CameraShake camShake;
     System.Random rnd = new System.Random();
     int numRnd;
@@ -26,6 +28,8 @@ public class Boss : MonoBehaviour
 
         anim = GetComponent<Animator>();
         sumo_health = 100f;
+        player = GameObject.FindGameObjectWithTag("Players");
+        players = player.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -90,13 +94,7 @@ public class Boss : MonoBehaviour
         bomb3rb.AddForce(-distanceBomb3 * 15);
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Shuriken")
-        {
-            //takeDamage();
-        }
-    }
+
 
     //Metodo para restarle vida
     public void takeDamage(int damage)
@@ -126,5 +124,10 @@ public class Boss : MonoBehaviour
             }
 
         }
+    }
+
+    public void pushBackPlayers()
+    {
+        players.pushBack();
     }
 }

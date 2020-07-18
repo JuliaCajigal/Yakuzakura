@@ -15,7 +15,7 @@ public class Bomb : MonoBehaviour
     private GameObject sumo;
     private SpriteRenderer spriteR;
     private GameObject player1;
-    private Sumo_Health sumoHealth;
+    private Boss boss;
     public Sprite explodingSprite;
 
 
@@ -25,7 +25,7 @@ public class Bomb : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sumo = GameObject.FindGameObjectWithTag("Sumo");
-        sumoHealth = sumo.GetComponent<Sumo_Health>();
+        boss = sumo.GetComponent<Boss>();
         player1 = GameObject.FindGameObjectWithTag("Player1");
         spriteR = GetComponentInChildren<SpriteRenderer>();
         
@@ -75,7 +75,7 @@ public class Bomb : MonoBehaviour
         if (distanceSumo <= 4)
         {
 
-            sumoHealth.TakeDamage(20);
+            boss.takeDamage(20);
         }
 
         if(distancePlayer <=4)
@@ -104,11 +104,6 @@ public class Bomb : MonoBehaviour
             }
         }
 
-        if(collision.gameObject.tag == "Sumo")
-        {
-            Player.score2 += 200;
-            Explode();
-        }
     }
 
 }

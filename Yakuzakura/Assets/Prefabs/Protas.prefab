@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5259713367119283283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.79, y: 6.51, z: -0.6480905}
+  m_LocalPosition: {x: 5.79, y: 6.51, z: 0}
   m_LocalScale: {x: 0.27126512, y: 0.27126512, z: 0.27126512}
   m_Children:
   - {fileID: 5259713368166011528}
@@ -53,6 +53,7 @@ MonoBehaviour:
   tapSound: {fileID: 8300000, guid: 6c221fd0e0aed824a86d15a03ed3ba99, type: 3}
   object1: {fileID: 5259713368166011529}
   object2: {fileID: 5259713367414145765}
+  timeDamage: 0
   key: {fileID: 0}
   twoPlayers: 0
   numberOfPlayers: 0
@@ -548,7 +549,7 @@ PrefabInstance:
     - target: {fileID: 7181396267677665449, guid: ba15e30936927254dad87d68ab3f08a2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6480905
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7181396267677665449, guid: ba15e30936927254dad87d68ab3f08a2,
         type: 3}
@@ -691,7 +692,7 @@ PrefabInstance:
     - target: {fileID: 2389721549440657201, guid: 3dd8d65ce172e2946a56d6a11f2aa21e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6480905
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2389721549440657201, guid: 3dd8d65ce172e2946a56d6a11f2aa21e,
         type: 3}

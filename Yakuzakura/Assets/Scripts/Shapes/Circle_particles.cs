@@ -8,8 +8,8 @@ public class Circle_particles : MonoBehaviour
     private float radius;
     private bool bigger;
     float attackDelay;
-    GameObject player;
-    Player py;
+    Player player;
+    Boss boss;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +18,9 @@ public class Circle_particles : MonoBehaviour
         radius = 0.05f;
         bigger = true;
         attackDelay = 5f;
-        player = GameObject.FindGameObjectWithTag("Players");
-        py = player.GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Players").GetComponent<Player>();
+        boss = GameObject.FindGameObjectWithTag("Players").GetComponent<Boss>();
+
     }
 
     // Update is called once per frame
@@ -46,19 +47,20 @@ public class Circle_particles : MonoBehaviour
         {
             Debug.Log(other.tag);
             bigger = false;
-            py.takeDamage(1,10);
+            player.takeDamage(1,10);
             Destroy(gameObject);
 
         }
         else if (other.tag == "Player2")
         {
             Debug.Log(other.tag);
+            bigger = false;
         }
 
         if (other.tag == "Sumo" && !bigger)
         {
             Destroy(gameObject);
-            //recibir daño sumo
+            boss.takeDamage(50);
         }
     }
 

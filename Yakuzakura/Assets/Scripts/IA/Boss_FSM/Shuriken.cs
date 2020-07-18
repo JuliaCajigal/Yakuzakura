@@ -10,7 +10,7 @@ public class Shuriken : MonoBehaviour
     AIDestinationSetter Astar;
     Rigidbody2D rb;
     GameObject player;
-    Sumo_Health sumoHealth;
+    private Boss boss;
     public bool againstPlayer;
 
     
@@ -19,7 +19,7 @@ public class Shuriken : MonoBehaviour
     {
         againstPlayer = true;
         sumo = GameObject.FindGameObjectWithTag("Sumo");
-        sumoHealth = sumo.GetComponent<Sumo_Health>();
+        boss = sumo.GetComponent<Boss>();
         Astar = GetComponent<AIDestinationSetter>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player1");
@@ -59,7 +59,7 @@ public class Shuriken : MonoBehaviour
         {
             if (againstPlayer == false)
             {
-                sumoHealth.TakeDamage(20);
+                boss.takeDamage(20);
                 Destroy(gameObject);
             }
         }

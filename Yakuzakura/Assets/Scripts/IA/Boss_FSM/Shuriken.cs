@@ -10,6 +10,8 @@ public class Shuriken : MonoBehaviour
     AIDestinationSetter Astar;
     Rigidbody2D rb;
     GameObject player;
+    GameObject players;
+    Player playersData;
     private Boss boss;
     public bool againstPlayer;
 
@@ -24,6 +26,8 @@ public class Shuriken : MonoBehaviour
         Astar = GetComponent<AIDestinationSetter>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player1");
+        players = GameObject.FindGameObjectWithTag("Players");
+        playersData = players.GetComponent<Player>();
         Astar.target = player.transform;
     }
 
@@ -41,7 +45,7 @@ public class Shuriken : MonoBehaviour
         //Ademas deja de poder hacerle daño al Chico
         if (collision.gameObject.tag == "Player2")
         {
-            Player.score2 += 200;
+            playersData.RiseScore(2, 217);
             againstPlayer = false;
             Astar.target = sumo.transform;
 
@@ -51,7 +55,7 @@ public class Shuriken : MonoBehaviour
         {
             if (againstPlayer == true)
             {
-                Player.health1 -= 10;
+                playersData.takeDamage(1, 10);
                 Destroy(gameObject);
             }
         }

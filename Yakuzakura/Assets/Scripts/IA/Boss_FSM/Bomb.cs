@@ -16,6 +16,8 @@ public class Bomb : MonoBehaviour
     private SpriteRenderer spriteR;
     private GameObject player1;
     private GameObject player2;
+    private GameObject players;
+    private Player player;
     private Boss boss;
     public Sprite explodingSprite;
 
@@ -29,6 +31,8 @@ public class Bomb : MonoBehaviour
         boss = sumo.GetComponent<Boss>();
         player1 = GameObject.FindGameObjectWithTag("Player1");
         player2 = GameObject.FindGameObjectWithTag("Player2");
+        players = GameObject.FindGameObjectWithTag("Players");
+        player = players.GetComponent<Player>();
         spriteR = GetComponentInChildren<SpriteRenderer>();
         
     }
@@ -63,7 +67,8 @@ public class Bomb : MonoBehaviour
     private void Explode()
     {
         //Cambia al sprite de explosion
-        spriteR.sprite = explodingSprite;
+        //spriteR.sprite = explodingSprite;
+        anim.SetTrigger("explode");
 
         //Calculamos la distancia entre la bomba y el sumo, y con el jugador
         //Si está en rango les hará daño
@@ -83,19 +88,23 @@ public class Bomb : MonoBehaviour
             boss.takeDamage(20);
         }
 
+        if(distancePlayer<=4 && distancePlayer2 <= 4)
+        {
+            player.takeDamage(3, 10);
+        }
+
         if(distancePlayer <=4)
         {
-            Player.health1 -= 10;
+            player.takeDamage(1, 10);
         }
 
         if(distancePlayer2 <=4)
         {
-            Player.health2 -= 10;
+            player.takeDamage(2, 10);
         }
 
-
     
-        Destroy(gameObject,0.3f);
+        Destroy(gameObject,0.5f);
     }
 
 

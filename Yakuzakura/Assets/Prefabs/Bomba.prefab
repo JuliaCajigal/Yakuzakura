@@ -117,7 +117,8 @@ MonoBehaviour:
   fuerza: 70
   ready: 0
   exploding: 0
-  explodingSprite: {fileID: 21300000, guid: 394070ffd81d3a44bb39f3bb56a5c222, type: 3}
+  explodingSprite: {fileID: -6219318787727831575, guid: 5f768e9518624eb4cb79bb38d5d84d39,
+    type: 3}
 --- !u!1 &895512671593120547
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 895512671593120547}
   m_LocalRotation: {x: -0, y: -0, z: 0.106624514, w: 0.9942994}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.09083116, y: 0.09083116, z: 0.09083114}
+  m_LocalScale: {x: 0.32743055, y: 0.32743055, z: 0.32743046}
   m_Children: []
   m_Father: {fileID: 895512671531554387}
   m_RootOrder: 0

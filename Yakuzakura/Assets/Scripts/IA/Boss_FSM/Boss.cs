@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
     public Animator anim;
+    public Animator animInterfaz;
     public GameObject wave;
     public GameObject shuriken;
     public GameObject bomb;
@@ -112,7 +114,9 @@ public class Boss : MonoBehaviour
 
             if (sumo_health <= 0)
             {
+                animInterfaz.SetTrigger("win");
                 anim.SetBool("Dead", true);
+                Invoke("LevelComplete", 6);
             }
             else if (sumo_health <= 30)
             {
@@ -129,5 +133,15 @@ public class Boss : MonoBehaviour
     public void pushBackPlayers()
     {
         players.pushBack();
+        players.takeDamage(3, 10);
+    }
+
+
+    public void LevelComplete()
+    {
+        players.RiseScore(3, 5000);
+        PlayerPrefs.SetInt("ActualScore1", Player.score1);
+        PlayerPrefs.SetInt("ActualScore2", Player.score2);
+        SceneManager.LoadScene("Win");
     }
 }

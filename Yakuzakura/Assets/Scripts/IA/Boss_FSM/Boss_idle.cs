@@ -19,7 +19,6 @@ public class Boss_idle : StateMachineBehaviour
         player1 = GameObject.FindGameObjectWithTag("Player1");
         player2 = GameObject.FindGameObjectWithTag("Player2");
 
-
         rb = animator.GetComponent<Rigidbody2D>();
         boss = animator.GetComponent<Boss>();
 
@@ -40,9 +39,8 @@ public class Boss_idle : StateMachineBehaviour
         {
             
             animator.SetTrigger("Push");
-            //players.pushBack();
-            
-       
+
+
         }
 
         attackDelay -= Time.deltaTime;

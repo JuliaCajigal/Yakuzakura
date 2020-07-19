@@ -46,13 +46,12 @@ public class Circle_particles : MonoBehaviour
 
         if (other.tag == "Player2")
         {
-            Debug.Log(other.tag);
+            Player.score2 += 200;        
             bigger = false;
 
         }
         else if (other.tag == "Player1" && bigger)
         {
-            Debug.Log("-----------------------------------------PLYR2"+bigger);
 
             player.takeDamage(1, 10);
             Destroy(gameObject);

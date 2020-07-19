@@ -728,6 +728,110 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.001001358, y: -1.6499996, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.41666666
+        value: {x: 0, y: -2.3, z: 0}
+        inSlope: {x: 0, y: -2.540001, z: 0}
+        outSlope: {x: 0, y: -2.540001, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.5
+        value: {x: -0.2, y: -2.92, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.6666667
+        value: {x: -0.02, y: -1.84, z: 0}
+        inSlope: {x: 0.22798368, y: 2.2800052, z: 0}
+        outSlope: {x: 0.22798368, y: 2.2800052, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.8333333
+        value: {x: -0.001001358, y: -1.6499996, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0.01999998, y: -1.5499992, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.41666666
+        value: {x: -0, y: -2.2, z: 0}
+        inSlope: {x: 0.15999985, y: -2.5000014, z: 0}
+        outSlope: {x: 0.15999985, y: -2.5000014, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.5
+        value: {x: 0.3, y: -2.8, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.6666667
+        value: {x: 0.01, y: -1.66, z: 0}
+        inSlope: {x: -0.35999966, y: 1.3200089, z: 0}
+        outSlope: {x: -0.35999966, y: 1.3200089, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.8333333
+        value: {x: -0.01999998, y: -1.5499992, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L/SUMO_0006_MANO_L
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -752,7 +856,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 1.4584627, y: 1.4584627, z: 1.4584627}
+        value: {x: 1.4192744, y: 1.4192744, z: 1.4192744}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -795,7 +899,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 1.4584627, y: 1.4584627, z: 1.4584627}
+        value: {x: 1.3878937, y: 1.3878937, z: 1.3878937}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -844,7 +948,33 @@ AnimationClip:
     path: SUMO_0001_TORSO/SUMO_0002_CORDEL
     classID: 212
     script: {fileID: 0}
-  m_PPtrCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: e092dd2f405920c4db90c3231744dcdd, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: de588ba6e829d134c93a5fe2e81e5060, type: 3}
+    - time: 0.6666667
+      value: {fileID: 21300000, guid: e092dd2f405920c4db90c3231744dcdd, type: 3}
+    - time: 0.8333333
+      value: {fileID: 21300000, guid: e092dd2f405920c4db90c3231744dcdd, type: 3}
+    attribute: m_Sprite
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: fb8f0412d4e55bc47aef3af8cd9de245, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: d040f89a53ed2584980c2c1d63e6ff02, type: 3}
+    - time: 0.6666667
+      value: {fileID: 21300000, guid: fb8f0412d4e55bc47aef3af8cd9de245, type: 3}
+    - time: 0.8333333
+      value: {fileID: 21300000, guid: fb8f0412d4e55bc47aef3af8cd9de245, type: 3}
+    attribute: m_Sprite
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L/SUMO_0006_MANO_L
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -889,6 +1019,20 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 1634985437
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1440031192
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3366268066
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -951,6 +1095,20 @@ AnimationClip:
       customType: 26
       isPPtrCurve: 0
     - serializedVersion: 2
+      path: 1440031192
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3366268066
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
       path: 3181875384
       attribute: 1
       script: {fileID: 0}
@@ -992,13 +1150,21 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
-    pptrCurveMapping: []
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: e092dd2f405920c4db90c3231744dcdd, type: 3}
+    - {fileID: 21300000, guid: de588ba6e829d134c93a5fe2e81e5060, type: 3}
+    - {fileID: 21300000, guid: e092dd2f405920c4db90c3231744dcdd, type: 3}
+    - {fileID: 21300000, guid: e092dd2f405920c4db90c3231744dcdd, type: 3}
+    - {fileID: 21300000, guid: fb8f0412d4e55bc47aef3af8cd9de245, type: 3}
+    - {fileID: 21300000, guid: d040f89a53ed2584980c2c1d63e6ff02, type: 3}
+    - {fileID: 21300000, guid: fb8f0412d4e55bc47aef3af8cd9de245, type: 3}
+    - {fileID: 21300000, guid: fb8f0412d4e55bc47aef3af8cd9de245, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8333333
+    m_StopTime: 0.84999996
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -2913,7 +3079,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 1.4584627
+        value: 1.4192744
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2959,7 +3125,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 1.4584627
+        value: 1.4192744
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3005,7 +3171,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 1.4584627
+        value: 1.4192744
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3051,7 +3217,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 1.4584627
+        value: 1.3878937
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3097,7 +3263,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 1.4584627
+        value: 1.3878937
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3143,7 +3309,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 1.4584627
+        value: 1.3878937
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3608,6 +3774,336 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
     path: SUMO_0001_TORSO/SUMO_0002_CORDEL
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.001001358
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -0.2
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6666667
+        value: -0.02
+        inSlope: 0.22798368
+        outSlope: 0.22798368
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8333333
+        value: -0.001001358
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -1.6499996
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41666666
+        value: -2.3
+        inSlope: -2.540001
+        outSlope: -2.540001
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -2.92
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6666667
+        value: -1.84
+        inSlope: 2.2800052
+        outSlope: 2.2800052
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8333333
+        value: -1.6499996
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.01999998
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41666666
+        value: -0
+        inSlope: 0.15999985
+        outSlope: 0.15999985
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6666667
+        value: 0.01
+        inSlope: -0.35999966
+        outSlope: -0.35999966
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8333333
+        value: -0.01999998
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L/SUMO_0006_MANO_L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -1.5499992
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41666666
+        value: -2.2
+        inSlope: -2.5000014
+        outSlope: -2.5000014
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: -2.8
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6666667
+        value: -1.66
+        inSlope: 1.3200089
+        outSlope: 1.3200089
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8333333
+        value: -1.5499992
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L/SUMO_0006_MANO_L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41666666
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.8333333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L/SUMO_0006_MANO_L
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -3618,36 +4114,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
     path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
     classID: 4
     script: {fileID: 0}
@@ -3678,7 +4144,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3688,7 +4154,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3698,7 +4164,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3768,7 +4234,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
+    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3778,7 +4244,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
+    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3788,7 +4254,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R
+    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3828,7 +4294,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3838,7 +4304,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3848,7 +4314,37 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: SUMO_0001_TORSO/SUMO_0009_MUSLO_R
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L
     classID: 4
     script: {fileID: 0}
   - curve:

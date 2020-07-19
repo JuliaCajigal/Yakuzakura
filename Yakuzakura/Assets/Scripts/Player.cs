@@ -22,12 +22,13 @@ public class Player : MonoBehaviour
     public int numberOfPlayers;
     Rigidbody2D rbplayer1;
     Rigidbody2D rbplayer2;
+    Animator anim;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponent<Animator>();
         score1 = PlayerPrefs.GetInt("ActualScore1");
         score2 = PlayerPrefs.GetInt("ActualScore2");
         //PlayerPrefs.SetInt("ActualScore2", 0);
@@ -129,16 +130,50 @@ public class Player : MonoBehaviour
             if (pj == 1)
             {
                 health1 -= damage;
-                Debug.Log("----------------------DAÑO-----------------------");
+                anim.SetTrigger("boyHit");
+                Debug.Log("----------------------DAÑO 1-----------------------");
             }
-            else
+            else if(pj == 2)
             {
+                anim.SetTrigger("girlHit");
                 health2 -= damage;
+                Debug.Log("----------------------DAÑO 2-----------------------");
+            }
+            else if (pj == 3)
+            {
+                anim.SetTrigger("bothHit");
+                health1 -= damage;
+                health2 -= damage;
+
+                Debug.Log("----------------------DAÑO 3-----------------------");
             }
 
-            
+
         }
     }
+
+
+    //Metodo para aumentar las puntuaciones del jugador
+    public void RiseScore(int pj, int points)
+    {
+            if (pj == 1)
+            {
+                score1 += points;
+
+            }
+            else if (pj == 2)
+            {
+                score2 += points;
+
+            }
+            else if (pj == 3)
+            {
+                score1 += points;
+                score2 += points;
+            }
+
+    }
+    
 
     public void pushBack()
     {

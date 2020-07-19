@@ -7,6 +7,7 @@ public class Shuriken : MonoBehaviour
 {
     public Animator anim;
     GameObject sumo;
+    GameObject player2;
     AIDestinationSetter Astar;
     Rigidbody2D rb;
     GameObject player;
@@ -14,6 +15,8 @@ public class Shuriken : MonoBehaviour
     Player playersData;
     private Boss boss;
     public bool againstPlayer;
+    AudioSource mySpeaker;
+    public AudioClip clink;
 
     
 
@@ -21,6 +24,7 @@ public class Shuriken : MonoBehaviour
     {
         againstPlayer = true;
         sumo = GameObject.FindGameObjectWithTag("Sumo");
+        mySpeaker = GetComponent<AudioSource>();
         boss = sumo.GetComponent<Boss>();
         anim = boss.anim;
         Astar = GetComponent<AIDestinationSetter>();
@@ -45,6 +49,7 @@ public class Shuriken : MonoBehaviour
         //Ademas deja de poder hacerle daño al Chico
         if (collision.gameObject.tag == "Player2")
         {
+            mySpeaker.PlayOneShot(clink);
             playersData.RiseScore(2, 217);
             againstPlayer = false;
             Astar.target = sumo.transform;

@@ -20,11 +20,16 @@ public class Bomb : MonoBehaviour
     private Player player;
     private Boss boss;
     public Sprite explodingSprite;
+    SoundsManager soundManager;
+
+    //Audio
+
 
 
     void Start()
     {
         time = 5f;
+        soundManager = GameObject.FindGameObjectWithTag("soundManager").GetComponent<SoundsManager>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sumo = GameObject.FindGameObjectWithTag("Sumo");
@@ -66,6 +71,8 @@ public class Bomb : MonoBehaviour
     //Metodo para que explote la bomba
     private void Explode()
     {
+
+        soundManager.makeSound(soundManager.explosion);
         //Cambia al sprite de explosion
         //spriteR.sprite = explodingSprite;
         anim.SetTrigger("explode");
@@ -103,7 +110,8 @@ public class Bomb : MonoBehaviour
             player.takeDamage(2, 10);
         }
 
-    
+
+ 
         Destroy(gameObject,0.5f);
     }
 
@@ -113,7 +121,7 @@ public class Bomb : MonoBehaviour
     {      
         if(collision.gameObject.tag == "Player2")
         {
-            Player.score2 += 200;
+            player.RiseScore(2, 243);
             Vector3 direction = -(transform.position - sumo.transform.position).normalized;
             rb.AddForce(direction * fuerza);
         }

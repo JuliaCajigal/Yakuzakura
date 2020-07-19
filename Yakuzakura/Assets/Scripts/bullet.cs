@@ -13,6 +13,7 @@ public class bullet : MonoBehaviour
     Rigidbody2D rb;
 
     GameObject target;
+    Player playerData;
     Vector2 moveDirection;
     public bool explode;
 
@@ -25,6 +26,7 @@ public class bullet : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player1");
+        playerData = target.GetComponentInParent<Player>();
         move();
 
     }
@@ -44,13 +46,13 @@ public class bullet : MonoBehaviour
                 if (collision.gameObject.tag == "Player1")
                 {
                     myAudio.PlayOneShot(manHit);
-                    Player.health1 -= 10f;
+                    playerData.takeDamage(1, 10);
                 }
 
                 if (collision.gameObject.tag == "Player2")
                 {
                     myAudio.PlayOneShot(repelBullet);
-                    Player.score2 += 125;
+                    playerData.RiseScore(2, 125);
                 }
             }
         }

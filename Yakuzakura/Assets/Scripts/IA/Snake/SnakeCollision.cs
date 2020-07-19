@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class SnakeCollision : MonoBehaviour
 {
+    GameObject player;
+    Player playerData;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Players");
+        playerData = player.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -21,8 +24,8 @@ public class SnakeCollision : MonoBehaviour
         if (collision.gameObject.tag == "Player2")
         {
 
-           // myAudio.PlayOneShot(girlHit);
-            Player.health2 -= 10f;
+            // myAudio.PlayOneShot(girlHit);
+            playerData.takeDamage(2, 10);
             Destroy(this.gameObject);
             Destroy(this.gameObject.transform.parent.gameObject);
         }

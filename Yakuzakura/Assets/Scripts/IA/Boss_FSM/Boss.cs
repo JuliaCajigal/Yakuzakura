@@ -15,6 +15,12 @@ public class Boss : MonoBehaviour
     public GameObject player;
     public Player players;
     public CameraShake camShake;
+
+    //Audio
+    public AudioSource mySpeaker;
+    public AudioClip bossHit;
+    public AudioClip stamp;
+
     System.Random rnd = new System.Random();
     int numRnd;
 
@@ -27,7 +33,7 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        mySpeaker = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         sumo_health = 100f;
         player = GameObject.FindGameObjectWithTag("Players");
@@ -106,6 +112,7 @@ public class Boss : MonoBehaviour
             Debug.Log("-------------------------------------------------------------------" + anim.GetInteger("Phase"));
             Debug.Log(sumo_health);
 
+            mySpeaker.PlayOneShot(bossHit);
             anim.SetTrigger("Hit");
             sumo_health -= damage;
             timeDamage = 0.5f;
@@ -143,5 +150,15 @@ public class Boss : MonoBehaviour
         PlayerPrefs.SetInt("ActualScore1", Player.score1);
         PlayerPrefs.SetInt("ActualScore2", Player.score2);
         SceneManager.LoadScene("Win");
+    }
+
+    public void MakeSound (AudioClip clip)
+    {
+        mySpeaker.PlayOneShot(clip);
+    }
+
+    public void MakeStampSound()
+    {
+        mySpeaker.PlayOneShot(stamp);
     }
 }

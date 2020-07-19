@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 {
     public AudioSource myAudio;
     public AudioClip tapSound;
+    public AudioClip girlHit;
+    public AudioClip boyHit;
     public Orbit object1;
     public Orbit2 object2;
     public static float health1;
@@ -129,18 +131,22 @@ public class Player : MonoBehaviour
 
             if (pj == 1)
             {
+                myAudio.PlayOneShot(boyHit);
                 health1 -= damage;
                 anim.SetTrigger("boyHit");
                 Debug.Log("----------------------DAÑO 1-----------------------");
             }
             else if(pj == 2)
             {
+                myAudio.PlayOneShot(girlHit);
                 anim.SetTrigger("girlHit");
                 health2 -= damage;
                 Debug.Log("----------------------DAÑO 2-----------------------");
             }
             else if (pj == 3)
             {
+                myAudio.PlayOneShot(boyHit);
+                myAudio.PlayOneShot(girlHit);
                 anim.SetTrigger("bothHit");
                 health1 -= damage;
                 health2 -= damage;

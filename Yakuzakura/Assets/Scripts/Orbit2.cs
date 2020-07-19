@@ -33,9 +33,10 @@ public class Orbit2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = (transform.position - anchorObject.transform.position).normalized * distance + anchorObject.transform.position;
+
+       transform.position = (transform.position - anchorObject.transform.position).normalized * distance + anchorObject.transform.position;
        rb = this.GetComponent<Rigidbody2D>();
-        zAxis = new Vector3(0, 0, -1);
+       zAxis = new Vector3(0, 0, -1);
     }
 
 

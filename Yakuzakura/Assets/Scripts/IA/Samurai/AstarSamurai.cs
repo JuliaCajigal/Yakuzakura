@@ -11,6 +11,8 @@ public class AstarSamurai : AIPath
     public SamuraiBehaviour samurai;
     System.Random rnd = new System.Random();
     public bool attacking;
+    GameObject player;
+    Player playerData;
 
 
 
@@ -18,6 +20,8 @@ public class AstarSamurai : AIPath
     {
         attacking = true;
         samurai = GetComponentInChildren<SamuraiBehaviour>();
+        player = GameObject.FindGameObjectWithTag("Players");
+        playerData = player.GetComponent<Player>();
 
     }
 
@@ -66,7 +70,7 @@ public class AstarSamurai : AIPath
                 samurai.Astar.enabled = false;
                 //Se activa el Script que tiene el modo RETROCEDER
                 samurai.WalkBack.enabled = true;
-                Player.health2 -= 5;
+                playerData.takeDamage(2, 5);
 
 
         }

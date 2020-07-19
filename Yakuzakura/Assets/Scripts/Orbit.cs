@@ -38,7 +38,8 @@ public class Orbit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // Sprite actualSprite = this.GetComponent<SpriteRenderer>().sprite;
+        // Sprite actualSprite = this.GetComponent<SpriteRenderer>().sprite;
+
         transform.position = (transform.position - anchorObject.transform.position).normalized * distance + anchorObject.transform.position;
         zAxis = new Vector3(0, 0, -1);
         rb = this.GetComponent<Rigidbody2D>();
@@ -211,7 +212,7 @@ public class Orbit : MonoBehaviour
                 myAudio.PlayOneShot(slash);
                 Player.score1 += 435;
                 Destroy(collision.gameObject);
-                Destroy(collision.gameObject.transform.parent.gameObject);
+
             }
         }
 

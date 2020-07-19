@@ -5774,6 +5774,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5259713366767716194}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &432649836
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432649835}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9dfcce38d61d4e94ab59e46b6ab5b888, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &432649841
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35644,18 +35663,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5259713366767716194}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1873267760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873267759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f63d117ccc6fa3c44928ae91f95587b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1873267763
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40018,6 +40025,11 @@ PrefabInstance:
       propertyPath: girlHit
       value: 
       objectReference: {fileID: 8300000, guid: 340c49b3e222e2741bc1ce5e72c93d41, type: 3}
+    - target: {fileID: 5259713367414145769, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 5259713368166011525, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
         type: 3}
       propertyPath: m_Layer
@@ -40068,6 +40080,11 @@ PrefabInstance:
       propertyPath: deathEnemy
       value: 
       objectReference: {fileID: 8300000, guid: 6754e6c86eb2ddd4cbc777f7b846c806, type: 3}
+    - target: {fileID: 5259713368166011534, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59, type: 3}
 --- !u!1001 &7336867311540729307

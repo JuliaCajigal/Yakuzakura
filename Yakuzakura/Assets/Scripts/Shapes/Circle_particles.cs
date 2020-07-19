@@ -10,12 +10,15 @@ public class Circle_particles : MonoBehaviour
     private bool bigger;
     Player player;
     Boss boss;
+    AudioSource mySpeaker;
+    public AudioClip clink;
    
 
 
     // Start is called before the first frame update
     void Start()
     {
+        mySpeaker = GetComponent<AudioSource>();
         ps = GetComponent<ParticleSystem>();
         radius = 0.05f;
         bigger = true;
@@ -46,6 +49,7 @@ public class Circle_particles : MonoBehaviour
 
         if (other.tag == "Player2")
         {
+            mySpeaker.PlayOneShot(clink);
             Player.score2 += 200;        
             bigger = false;
 

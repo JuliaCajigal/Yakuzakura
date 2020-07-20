@@ -15,22 +15,27 @@ public class Orbit2 : MonoBehaviour
     public AudioClip openDoor;
     public AudioClip getKeySound;
     public AudioClip ramenSound;
+    public bool makeSound;
+
+    //Otro personaje
     public GameObject anchorObject;
 
+    //Movimiento
     public float speed;
     public bool orbiting;
     public Vector3 zAxis;
     public Transform posPlayer;
     private Rigidbody2D rb;
     public int distance = 1;
+
+    //Colision con mapa
     public Tilemap tilemap_obj;
     public Sprite standingSprite;
     public Sprite roundingSprite;
 
-    public bool makeSound;
+   
 
 
-    // Start is called before the first frame update
     void Start()
     {
 
@@ -40,34 +45,34 @@ public class Orbit2 : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
+        //Orientación del sprite, siempre mirando al otro jugador
          RotateTo();
+
+        //Gestiona giro del pj alrededor del otro
         if (orbiting == true)
         {
             transform.position = (transform.position - anchorObject.transform.position).normalized * distance + anchorObject.transform.position;
             this.GetComponent<SpriteRenderer>().sprite = roundingSprite;
             OrbitAround();
-
-
         }
         else
         {
             this.GetComponent<SpriteRenderer>().sprite = standingSprite;
         }
-
     }
 
-
+    //Colisiones
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Mantener la distancia con su compañero
-
+        //Al chocar cambiamos de dirección
         zAxis = -zAxis;
+
+        //Posición colision
         Vector3Int tilePos = tilemap_obj.WorldToCell(posPlayer.position);
 
-
+        //Colision con objetos mapa
         if (tilemap_obj.HasTile(tilePos) == true)
 
         {
@@ -172,6 +177,7 @@ public class Orbit2 : MonoBehaviour
 
         }
 
+        //Colision enemigo
         if (collision.gameObject.tag == "EnemyFollower")
         {
             myAudio.PlayOneShot(girlHit);
@@ -179,7 +185,7 @@ public class Orbit2 : MonoBehaviour
         }
     }
 
-    
+    //Orientación
     void RotateTo()
     {
 
@@ -188,13 +194,14 @@ public class Orbit2 : MonoBehaviour
         rb.rotation = angle;
     }
     
-
+    //Giro alrededor
     void OrbitAround()
     {
     
     transform.RotateAround(anchorObject.transform.position, zAxis, speed * Time.deltaTime);
     }
 
+    //Sonido
     private void RestartMakeSound()
     {
         makeSound = false;

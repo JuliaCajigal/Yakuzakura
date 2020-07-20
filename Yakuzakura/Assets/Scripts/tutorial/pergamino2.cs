@@ -7,7 +7,6 @@ public class pergamino2 : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float speed = 2.8f;
-    private float amplitude = 1f;
     public bool clicked;
     public page page;
     //private Vector3 originalScale;

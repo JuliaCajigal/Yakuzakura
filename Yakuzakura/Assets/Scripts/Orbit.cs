@@ -16,8 +16,9 @@ public class Orbit : MonoBehaviour
     public AudioClip getKeySound;
     public AudioClip ramenSound;
     public AudioClip deathEnemy;
+    public bool makeSound;
 
-
+    //Movimiento
     public GameObject anchorObject;
     public float speed;
     public bool orbiting;
@@ -25,60 +26,50 @@ public class Orbit : MonoBehaviour
     public Transform posPlayer;
     private Rigidbody2D rb;
     public int distance = 1;
+
+    //Colisiones con mapa
     public Tilemap tilemap_obj;
     public Sprite standingSprite;
     public Sprite roundingSprite;
 
-    public bool makeSound;
 
-
-
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        // Sprite actualSprite = this.GetComponent<SpriteRenderer>().sprite;
-
         transform.position = (transform.position - anchorObject.transform.position).normalized * distance + anchorObject.transform.position;
         zAxis = new Vector3(0, 0, -1);
         rb = this.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
 
-
+        //Orientación
         RotateTo();
+
+        //Órbita alrededor del otro pj
         if (orbiting == true)
         {
             transform.position = (transform.position - anchorObject.transform.position).normalized * distance + anchorObject.transform.position;
             this.GetComponent<SpriteRenderer>().sprite = roundingSprite;
             OrbitAround();
-
-
         }
         else
         {
             this.GetComponent<SpriteRenderer>().sprite = standingSprite;
-        }
-
-           
-
-      
+        }    
     }
+
+    //Colisiones
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       
+        //Al chocar cambiamos de dirección
         zAxis = -zAxis;
 
-
+        //Posición colision
         Vector3Int tilePos = tilemap_obj.WorldToCell(posPlayer.position);
 
-
-
-        //Colisiones con diferentes objetos según su nombre
+        //Colision con objetos mapa
         if (tilemap_obj.HasTile(tilePos) == true)
 
         {
@@ -180,8 +171,7 @@ public class Orbit : MonoBehaviour
 
             //Reescanear para actualizar el grafo de A*
             AstarPath.active.Scan();
-
-
+            
         }
 
         //ENEMIGO DISPARADOR
@@ -218,15 +208,14 @@ public class Orbit : MonoBehaviour
 
     }
  
+    //Orbitar alrededor otro oj
     void OrbitAround()
     {
-    
-    transform.RotateAround(anchorObject.transform.position, zAxis, speed * Time.deltaTime);
+        transform.RotateAround(anchorObject.transform.position, zAxis, speed * Time.deltaTime);
     }
 
-
-
-    
+  
+    //Orientación
     void RotateTo()
     {
 
@@ -235,6 +224,7 @@ public class Orbit : MonoBehaviour
         rb.rotation = angle;
     }
 
+    //Sonido
     private void RestartMakeSound()
     {
         makeSound = false;

@@ -4,49 +4,56 @@ using UnityEngine;
 
 public class Circle_particles : MonoBehaviour
 {
+    //Referencias boss y pjs
     public Animator anim;
+    Boss boss;
+    Player player;
+
+    //Físicas efecto partículas
     public ParticleSystem ps;
     private float radius;
     private bool bigger;
-    Player player;
-    Boss boss;
+
+    //Sonido
     AudioSource mySpeaker;
     public AudioClip clink;
    
-
-
-    // Start is called before the first frame update
+  
     void Start()
     {
-        mySpeaker = GetComponent<AudioSource>();
+        //Físicas
         ps = GetComponent<ParticleSystem>();
         radius = 0.05f;
         bigger = true;
-        player = GameObject.FindGameObjectWithTag("Players").GetComponent<Player>();
+        
+        //Boss
         boss = GameObject.FindGameObjectWithTag("Sumo").GetComponent<Boss>();
         anim = boss.anim;
+        player = GameObject.FindGameObjectWithTag("Players").GetComponent<Player>();
 
+        //Audio
+        mySpeaker = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+ 
     void Update()
     {
-
+        //Gestiona si la onda expansiva está creciendo
         if (bigger)
         {
             Bigger();
         }
+        //O decreciendo
         else
         {
             Smaller();
         }
-        
-        
     }
 
+    //Colisiones
     void OnParticleCollision(GameObject other)
     {
-
+        //Colisión jugador 2 (chica): rebota la onda
         if (other.tag == "Player2" && bigger)
         {
             mySpeaker.PlayOneShot(clink);
@@ -54,6 +61,7 @@ public class Circle_particles : MonoBehaviour
             bigger = false;
 
         }
+        //Colisión jugador 1 (chico): solo recibe daño si la onda está creciendo
         else if (other.tag == "Player1" && bigger)
         {
 
@@ -61,6 +69,7 @@ public class Circle_particles : MonoBehaviour
             Destroy(gameObject);
         }
 
+        //Colisión Boss: si está decreciendo recibe daño
         if (other.tag == "Sumo" && !bigger)
         {
             if (anim.GetInteger("Phase") == 2)
@@ -72,12 +81,14 @@ public class Circle_particles : MonoBehaviour
         }
     }
 
+    //Crecimiento onda
     void Bigger()
     {
         var sh = ps.shape;
         sh.radius += radius;
     }
 
+    //Decrecimiento onda
     void Smaller()
     {
         var sh = ps.shape;

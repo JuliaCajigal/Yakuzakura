@@ -4,43 +4,59 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-
+    //Físicas bomba
     public float time;
     public float fuerza;
     public bool ready;
     public bool exploding;
     public bool touchedPlayer;
-
-    private Animator anim;
     private Rigidbody2D rb;
-    private GameObject sumo;
-    private SpriteRenderer spriteR;
+
+    //Referencias a pjs
     private GameObject player1;
     private GameObject player2;
     private GameObject players;
     private Player player;
+
+    //Referencia a boss
     private Boss boss;
+    private GameObject sumo;
+
+    //Animaciones
     public Sprite explodingSprite;
-    SoundsManager soundManager;
+    private SpriteRenderer spriteR;
+    private Animator anim;
+    
+
+    //Temblor camara
+    public CameraShake camShake;
 
     //Audio
-
+    private SoundsManager soundManager;
 
 
     void Start()
     {
-        time = 5f;
+        //Tiempo que tardan en explotar
+        time = 6f;
+
+        //Sonido
         soundManager = GameObject.FindGameObjectWithTag("soundManager").GetComponent<SoundsManager>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sumo = GameObject.FindGameObjectWithTag("Sumo");
         boss = sumo.GetComponent<Boss>();
+
+        //Referencias a jugadores
         player1 = GameObject.FindGameObjectWithTag("Player1");
         player2 = GameObject.FindGameObjectWithTag("Player2");
         players = GameObject.FindGameObjectWithTag("Players");
         player = players.GetComponent<Player>();
         spriteR = GetComponentInChildren<SpriteRenderer>();
-        
+
+        //Temblor
+        camShake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
+
     }
 
  
@@ -48,6 +64,7 @@ public class Bomb : MonoBehaviour
     {
         time -= Time.deltaTime;
 
+        //Tiempo de vida de la bomba y sus animaciones
         if (time <= 3)
         {
             readyToExplode();
@@ -89,7 +106,7 @@ public class Bomb : MonoBehaviour
         Vector3 directionPlayer2 = this.transform.position - player2.transform.position;
         var distancePlayer2 = directionPlayer2.magnitude;
 
-
+        //Gestión daño bomba
         if (distanceSumo <= 4 && touchedPlayer == false)
         {
 
@@ -111,8 +128,10 @@ public class Bomb : MonoBehaviour
             player.takeDamage(2, 10);
         }
 
+        //Temblor cámara
+        StartCoroutine(camShake.Shake(.15f, .8f));
 
- 
+        //Destrucción
         Destroy(gameObject,0.5f);
     }
 
@@ -134,7 +153,5 @@ public class Bomb : MonoBehaviour
                 Explode();
             }
         }
-
     }
-
 }

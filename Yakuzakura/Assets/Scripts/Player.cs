@@ -27,24 +27,33 @@ public class Player : MonoBehaviour
     Animator anim;
 
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        //Referencia parpadeo
         anim = GetComponent<Animator>();
+
+        //Puntuación y vida
         score1 = PlayerPrefs.GetInt("ActualScore1");
         score2 = PlayerPrefs.GetInt("ActualScore2");
-        //PlayerPrefs.SetInt("ActualScore2", 0);
+        health1 = 100f;
+        health2 = 100f;
+
+        //Variable controlar que pj gira
         object1.orbiting = true;
         object2.orbiting = false;
         object2.zAxis = -object2.zAxis;
-        health1 = 100f;
-        health2 = 100f;
+        
+        //Gestionar si tenemos la llave para el siguiente nivel
         gotKey = false;
         key.SetActive(false);
-        numberOfPlayers = PlayerPrefs.GetInt("Players");
+        
+        //Controlar físicas de cada pj
         rbplayer1 = object1.GetComponent<Rigidbody2D>();
         rbplayer2 = object2.GetComponent<Rigidbody2D>();
 
+        //Establecemos modo de juego
+        numberOfPlayers = PlayerPrefs.GetInt("Players");
         if (numberOfPlayers == 1)
         {
             twoPlayers = false;
@@ -63,7 +72,7 @@ public class Player : MonoBehaviour
         timeDamage -= Time.deltaTime;
 
         
-
+        //Botón ESC partida
         if (Input.GetKeyDown(KeyCode.Escape)){
             PlayerPrefs.SetInt("ActualScore1", 0);
             PlayerPrefs.SetInt("ActualScore2", 0);
@@ -71,6 +80,7 @@ public class Player : MonoBehaviour
 
         }
 
+        //Controles un jugador
         if (twoPlayers == false)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -82,6 +92,7 @@ public class Player : MonoBehaviour
             }
         }
 
+        //Controles dos jugadores
         if (twoPlayers == true)
         {
             if (Input.GetKeyDown(KeyCode.A) && object1.orbiting == true)
@@ -99,50 +110,65 @@ public class Player : MonoBehaviour
 
         }
 
+        //Muerte del jugador y puntuación final
+        checkLife();
 
-        if (Player.health1 <= 0 || Player.health2 <=0)
+        //Activar llave en interfaz
+        checkKey();
+
+
+    }
+
+    private void checkLife()
+    {
+        if (Player.health1 <= 0 || Player.health2 <= 0)
         {
             PlayerPrefs.SetInt("ActualScore1", score1);
             PlayerPrefs.SetInt("ActualScore2", score2);
             Death();
         }
+    }
 
-        if(gotKey == true)
+    private void checkKey()
+    {
+        
+        if (gotKey == true)
         {
             key.SetActive(true);
         }
-
-
     }
 
+    //Muerte
     void Death()
     {
         SceneManager.LoadScene("GameOver");
     }
 
+    //Método para herir a los jugadores
     public void takeDamage(int pj, int damage)
     {
-        Debug.Log("----------------------DAÑO");
-        Debug.Log(timeDamage);
 
         if (timeDamage <= 0f)
         {
             timeDamage = 1f;
 
+            //Daño pj1 (chico)
             if (pj == 1)
             {
                 myAudio.PlayOneShot(boyHit);
                 health1 -= damage;
                 anim.SetTrigger("boyHit");
-                Debug.Log("----------------------DAÑO 1-----------------------");
+
             }
+            //Daño pj 2 (chica)
             else if(pj == 2)
             {
                 myAudio.PlayOneShot(girlHit);
                 anim.SetTrigger("girlHit");
                 health2 -= damage;
-                Debug.Log("----------------------DAÑO 2-----------------------");
+
             }
+            //Dañar ambos jugadores
             else if (pj == 3)
             {
                 myAudio.PlayOneShot(boyHit);
@@ -151,10 +177,7 @@ public class Player : MonoBehaviour
                 health1 -= damage;
                 health2 -= damage;
 
-                Debug.Log("----------------------DAÑO 3-----------------------");
             }
-
-
         }
     }
 
@@ -180,7 +203,7 @@ public class Player : MonoBehaviour
 
     }
     
-
+    //Método para empujar a los jugadores
     public void pushBack()
     {
 

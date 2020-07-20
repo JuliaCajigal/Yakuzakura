@@ -5,33 +5,48 @@ using Pathfinding;
 
 public class Shuriken : MonoBehaviour
 {
-    public Animator anim;
-    GameObject sumo;
-    GameObject player2;
-    AIDestinationSetter Astar;
-    Rigidbody2D rb;
-    GameObject player;
-    GameObject players;
-    Player playersData;
-    private Boss boss;
+    //Referencias a pjs
+    private GameObject player2;
+    private GameObject player;
+    private GameObject players;
+    private Player playersData;
     public bool againstPlayer;
+
+    //Físicas
+    private AIDestinationSetter Astar;
+    private Rigidbody2D rb;
+
+    //Animaciones
+    public Animator anim;
+
+    //Referencias a boss
+    private Boss boss;
+    private GameObject sumo;
+
+    //Audio
     AudioSource mySpeaker;
     public AudioClip clink;
 
-    
 
     void Start()
     {
-        againstPlayer = true;
+        //Boss
         sumo = GameObject.FindGameObjectWithTag("Sumo");
-        mySpeaker = GetComponent<AudioSource>();
         boss = sumo.GetComponent<Boss>();
+
+        //Animaciones y audio
+        mySpeaker = GetComponent<AudioSource>();
         anim = boss.anim;
-        Astar = GetComponent<AIDestinationSetter>();
         rb = GetComponent<Rigidbody2D>();
+
+        //Referencia pjs
         player = GameObject.FindGameObjectWithTag("Player1");
         players = GameObject.FindGameObjectWithTag("Players");
         playersData = players.GetComponent<Player>();
+        againstPlayer = true;
+
+        //Físicas
+        Astar = GetComponent<AIDestinationSetter>();
         Astar.target = player.transform;
     }
 
@@ -77,7 +92,4 @@ public class Shuriken : MonoBehaviour
             }
         }
     }
-
-
-
 }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
+    //Referencias
     public Animator anim;
     public Animator animInterfaz;
     public GameObject wave;
@@ -48,14 +49,12 @@ public class Boss : MonoBehaviour
 
         //Barra de vida
         healthBar.fillAmount = sumo_health / maxHealth;
-
-        Debug.Log(anim.GetInteger("Phase"));
     }
 
+    //Ataque FASE 1: lanza shurikens que siguen al jugador
     public void phaseOne()
     {
-        //anim.SetTrigger("Throw");
-        Debug.Log("--------------------------------ATAQUE FASE UNO");
+                Debug.Log("--------------------------------ATAQUE FASE UNO");
 
         Instantiate(shuriken, transform.position + new Vector3(-3, 0, -0.2f), Quaternion.identity);
         Instantiate(shuriken, transform.position + new Vector3(3, 0, -0.2f), Quaternion.identity);
@@ -64,9 +63,9 @@ public class Boss : MonoBehaviour
 
     }
 
+    //Ataque FASE 2: pisotón que causa onda expansiva
     public void phaseTwo()
     {
-        //anim.SetTrigger("Jump");
         Debug.Log("--------------------------------ATAQUE FASE DOS");
 
         Instantiate(wave, transform.position + new Vector3(0f, -1, -0.2f), Quaternion.identity);
@@ -75,6 +74,7 @@ public class Boss : MonoBehaviour
 
     }
 
+    //Ataque FASE 3: bombas con temporizador
     public void phaseThree()
     {
         anim.SetTrigger("Throw");
@@ -104,31 +104,37 @@ public class Boss : MonoBehaviour
 
 
 
-    //Metodo para restarle vida
+    //Metodo para restarle vida al BOSS
     public void takeDamage(int damage)
     {
         if (timeDamage <= 0f)
         {
-            Debug.Log("-------------------------------------------------------------------" + anim.GetInteger("Phase"));
-            Debug.Log(sumo_health);
 
+            //Sonido
             mySpeaker.PlayOneShot(bossHit);
+
+            //Activamos trigger "HIT", lanza animación de daño del jefe
             anim.SetTrigger("Hit");
+
+            //Restamos la vida y reseteamos el tiempo entre daño
             sumo_health -= damage;
             timeDamage = 0.5f;
 
 
-
+            //FASE 3
             if (sumo_health <= 0)
             {
+                //Lanzamos la muerte del jefe y el fin de partida
                 animInterfaz.SetTrigger("win");
                 anim.SetBool("Dead", true);
                 Invoke("LevelComplete", 6);
             }
+            //FASE 2
             else if (sumo_health <= 30)
             {
                 anim.SetInteger("Phase", 3);
             }
+            //FASE 1
             else if (sumo_health <= 60)
             {
                 anim.SetInteger("Phase", 2);
@@ -137,13 +143,14 @@ public class Boss : MonoBehaviour
         }
     }
 
+    //Método para empujar a los juegadores si se acercan demasiado
     public void pushBackPlayers()
     {
         players.pushBack();
         players.takeDamage(3, 10);
     }
 
-
+    //Fin de nivel
     public void LevelComplete()
     {
         players.RiseScore(3, 5000);
@@ -152,11 +159,13 @@ public class Boss : MonoBehaviour
         SceneManager.LoadScene("Win");
     }
 
+    //Sonido
     public void MakeSound (AudioClip clip)
     {
         mySpeaker.PlayOneShot(clip);
     }
 
+    //Sonido pisotón
     public void MakeStampSound()
     {
         mySpeaker.PlayOneShot(stamp);

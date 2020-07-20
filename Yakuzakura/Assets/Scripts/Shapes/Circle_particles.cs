@@ -47,7 +47,7 @@ public class Circle_particles : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
 
-        if (other.tag == "Player2")
+        if (other.tag == "Player2" && bigger)
         {
             mySpeaker.PlayOneShot(clink);
             Player.score2 += 200;        

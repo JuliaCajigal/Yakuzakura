@@ -2222,7 +2222,25 @@ AnimationClip:
     path: SUMO_0001_TORSO
     classID: 212
     script: {fileID: 0}
-  m_PPtrCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: e092dd2f405920c4db90c3231744dcdd, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: bbb38c46c7d9d554f872468cf62383a8, type: 3}
+    attribute: m_Sprite
+    path: SUMO_0001_TORSO/SUMO_0005_BRAZO_R/SUMO_0004_ANT_R/SUMO_0003_MANO_R
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: fb8f0412d4e55bc47aef3af8cd9de245, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 76ffb9f927a6a7f4ab2df64401aca414, type: 3}
+    attribute: m_Sprite
+    path: SUMO_0001_TORSO/SUMO_0008_BRAZO_L/SUMO_0007_ANT_L/SUMO_0006_MANO_L
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -2588,6 +2606,20 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
+      path: 1440031192
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3366268066
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
       path: 3068611212
       attribute: 1
       script: {fileID: 0}
@@ -2650,7 +2682,11 @@ AnimationClip:
       typeID: 4
       customType: 4
       isPPtrCurve: 0
-    pptrCurveMapping: []
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: e092dd2f405920c4db90c3231744dcdd, type: 3}
+    - {fileID: 21300000, guid: bbb38c46c7d9d554f872468cf62383a8, type: 3}
+    - {fileID: 21300000, guid: fb8f0412d4e55bc47aef3af8cd9de245, type: 3}
+    - {fileID: 21300000, guid: 76ffb9f927a6a7f4ab2df64401aca414, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

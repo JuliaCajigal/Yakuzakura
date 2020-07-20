@@ -9,6 +9,7 @@ public class Bomb : MonoBehaviour
     public float fuerza;
     public bool ready;
     public bool exploding;
+    public bool touchedPlayer;
 
     private Animator anim;
     private Rigidbody2D rb;
@@ -89,7 +90,7 @@ public class Bomb : MonoBehaviour
         var distancePlayer2 = directionPlayer2.magnitude;
 
 
-        if (distanceSumo <= 4)
+        if (distanceSumo <= 4 && touchedPlayer == false)
         {
 
             boss.takeDamage(20);
@@ -129,6 +130,7 @@ public class Bomb : MonoBehaviour
         {
             if (exploding == false)
             {
+                touchedPlayer = true;
                 Explode();
             }
         }

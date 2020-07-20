@@ -151,7 +151,7 @@ public class Orbit2 : MonoBehaviour
             }
 
             //RAMEN
-            if (tilemap_obj.GetTile(tilePos).name == "tileset_Home_58" || tilemap_obj.GetTile(tilePos).name == "tileset_Garden_24")
+            if (tilemap_obj.GetTile(tilePos).name == "tileset_Home_58" || tilemap_obj.GetTile(tilePos).name == "tileset_Garden_24" || collision.gameObject.tag == "Ramen")
             {
                 myAudio.PlayOneShot(ramenSound);
                 if (Player.health2 <= 70)
@@ -175,6 +175,21 @@ public class Orbit2 : MonoBehaviour
             //Reescanear para actualizar el grafo de A*
             AstarPath.active.Scan();
 
+        }
+
+        //RAMEN-BOSS
+        if (collision.gameObject.tag == "ramen")
+        {
+            if (Player.health2 <= 70)
+            {
+                Player.health2 += 30;
+            }
+            else
+            {
+                Player.health2 = 100;
+            }
+            Player.score2 += 255;
+            Destroy(collision.gameObject);
         }
 
         //Colision enemigo

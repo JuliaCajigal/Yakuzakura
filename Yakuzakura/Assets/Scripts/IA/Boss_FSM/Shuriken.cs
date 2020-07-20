@@ -86,7 +86,7 @@ public class Shuriken : MonoBehaviour
             {
                 if (anim.GetInteger("Phase") == 1)
                 {
-                    boss.takeDamage(20);
+                    boss.takeDamage(10);
                 }
                 Destroy(gameObject);
             }

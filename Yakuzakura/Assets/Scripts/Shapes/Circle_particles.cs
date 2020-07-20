@@ -74,7 +74,7 @@ public class Circle_particles : MonoBehaviour
         {
             if (anim.GetInteger("Phase") == 2)
             {
-                boss.takeDamage(50);
+                boss.takeDamage(10);
             }
             
             Destroy(gameObject, 0.4f);

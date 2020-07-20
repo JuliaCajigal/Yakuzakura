@@ -163,6 +163,8 @@ public class Orbit : MonoBehaviour
                 Player.score1 += 255;
             }
 
+
+
             if (tilemap_obj.GetTile(tilePos).name != "tileset_Home_19" && tilemap_obj.GetTile(tilePos).name != "tileset_Garden_18")
             {
 
@@ -172,6 +174,21 @@ public class Orbit : MonoBehaviour
             //Reescanear para actualizar el grafo de A*
             AstarPath.active.Scan();
             
+        }
+
+        //RAMEN-BOSS
+        if(collision.gameObject.tag == "ramen")
+        {
+            if (Player.health1 <= 70)
+            {
+                Player.health1 += 30;
+            }
+            else
+            {
+                Player.health1 = 100;
+            }
+            Player.score1 += 255;
+            Destroy(collision.gameObject);
         }
 
         //ENEMIGO DISPARADOR

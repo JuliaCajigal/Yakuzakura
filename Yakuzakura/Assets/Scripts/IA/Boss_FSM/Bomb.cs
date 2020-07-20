@@ -38,7 +38,7 @@ public class Bomb : MonoBehaviour
     void Start()
     {
         //Tiempo que tardan en explotar
-        time = 6f;
+        time = 9f;
 
         //Sonido
         soundManager = GameObject.FindGameObjectWithTag("soundManager").GetComponent<SoundsManager>();
@@ -110,7 +110,7 @@ public class Bomb : MonoBehaviour
         if (distanceSumo <= 4 && touchedPlayer == false)
         {
 
-            boss.takeDamage(20);
+            boss.takeDamage(10);
         }
 
         if(distancePlayer<=4 && distancePlayer2 <= 4)

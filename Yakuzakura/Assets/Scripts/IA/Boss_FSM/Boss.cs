@@ -13,6 +13,7 @@ public class Boss : MonoBehaviour
     public GameObject wave;
     public GameObject shuriken;
     public GameObject bomb;
+    public GameObject ramen;
     public GameObject player;
     public Player players;
     public CameraShake camShake;
@@ -30,10 +31,12 @@ public class Boss : MonoBehaviour
     public float maxHealth = 100f;
     public static float sumo_health;
     public float timeDamage;
+    private bool firstTime;
 
     // Start is called before the first frame update
     void Start()
     {
+        firstTime = true;
         mySpeaker = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         sumo_health = 100f;
@@ -81,11 +84,25 @@ public class Boss : MonoBehaviour
         Debug.Log("--------------------------------ATAQUE FASE TRES");
 
         numRnd = rnd.Next(-2,0);
-        //Bomba1
-        GameObject bomb1 = Instantiate(bomb, transform.position + new Vector3(-3, numRnd, -0.2f), Quaternion.identity);
-        Vector3 distanceBomb1 = (transform.position - bomb1.transform.position);
-        Rigidbody2D bomb1rb = bomb1.GetComponent<Rigidbody2D>();
-        bomb1rb.AddForce(-distanceBomb1 * 15);
+
+
+        if(firstTime == true)
+        {
+            //Ramen
+            GameObject ramen1 = Instantiate(ramen, transform.position + new Vector3(-3, numRnd, -0.2f), Quaternion.identity);
+            Vector3 distanceRamen1 = (transform.position - ramen1.transform.position);
+            Rigidbody2D ramen1rb = ramen1.GetComponent<Rigidbody2D>();
+            ramen1rb.AddForce(-distanceRamen1 * 15);
+            firstTime = false;
+        }
+        else
+        {
+            //Bomba1
+            GameObject bomb1 = Instantiate(bomb, transform.position + new Vector3(-3, numRnd, -0.2f), Quaternion.identity);
+            Vector3 distanceBomb1 = (transform.position - bomb1.transform.position);
+            Rigidbody2D bomb1rb = bomb1.GetComponent<Rigidbody2D>();
+            bomb1rb.AddForce(-distanceBomb1 * 15);
+        }
 
         numRnd = rnd.Next(-2,0);
         //Bomba2

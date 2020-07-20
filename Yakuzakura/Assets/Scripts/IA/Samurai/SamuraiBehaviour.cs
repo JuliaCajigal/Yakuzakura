@@ -75,8 +75,9 @@ public class SamuraiBehaviour : MonoBehaviour
 
         if (patrolling == true)
         {
+
             //HACIA ARRIBA
-            if ((direction.y >= 0.5) && (direction.x <= 0.5 && direction.x >= -0.5))
+            if ((direction.y >= 0 && direction.y<=1) && (direction.x <= 0.5 && direction.x >= -0.5))
             {
                 animator.SetBool("LEFT", false);
                 animator.SetBool("UP", true);
@@ -85,7 +86,7 @@ public class SamuraiBehaviour : MonoBehaviour
             }
 
             //HACIA ABAJO
-            if ((direction.y < -0.5) && (direction.x <= 0.5 && direction.x >= -0.5))
+            if ((direction.y < 0 && direction.y > -1 ) && (direction.x < 0.5 && direction.x > -0.5))
             {
                 animator.SetBool("LEFT", false);
                 animator.SetBool("UP", false);
@@ -94,7 +95,7 @@ public class SamuraiBehaviour : MonoBehaviour
             }
 
             //HACIA LA IZQUIERDA
-            if ((direction.y < 0.5 && direction.y > -0.5) && (direction.x < 0))
+            if ((direction.y <= 0.5 && direction.y >= -0.5) && (direction.x <= 0 && direction.x>=-1 ))
             {
                 animator.SetBool("LEFT", true);
                 animator.SetBool("UP", false);
@@ -103,7 +104,7 @@ public class SamuraiBehaviour : MonoBehaviour
             }
 
             //HACIA LA DERECHA
-            if ((direction.y < 0.5 && direction.y > -0.5) && (direction.x > 0))
+            if ((direction.y < 0.5 && direction.y > -0.5) && (direction.x > 0 && direction.x <1))
             {
                 animator.SetBool("LEFT", false);
                 animator.SetBool("UP", false);
@@ -115,7 +116,7 @@ public class SamuraiBehaviour : MonoBehaviour
         if (chasing == true)
         {
             //HACIA ARRIBA
-            if ((direction.y >= 0.5) && (direction.x <= 0.5 && direction.x >= -0.5))
+            if ((direction.y >= 0 && direction.y <= 1) && (direction.x <= 0.5 && direction.x >= -0.5))
             {
                 animator.SetBool("LEFT_CHASE", false);
                 animator.SetBool("UP_CHASE", true);
@@ -124,7 +125,7 @@ public class SamuraiBehaviour : MonoBehaviour
             }
 
             //HACIA ABAJO
-            if ((direction.y < -0.5) && (direction.x <= 0.5 && direction.x >= -0.5))
+            if ((direction.y < 0 && direction.y > -1) && (direction.x < 0.5 && direction.x > -0.5))
             {
                 animator.SetBool("LEFT_CHASE", false);
                 animator.SetBool("UP_CHASE", false);
@@ -133,7 +134,7 @@ public class SamuraiBehaviour : MonoBehaviour
             }
 
             //HACIA LA IZQUIERDA
-            if ((direction.y < 0.5 && direction.y > -0.5) && (direction.x < 0))
+            if ((direction.y <= 0.5 && direction.y >= -0.5) && (direction.x <= 0 && direction.x >= -1))
             {
                 animator.SetBool("LEFT_CHASE", true);
                 animator.SetBool("UP_CHASE", false);
@@ -142,7 +143,7 @@ public class SamuraiBehaviour : MonoBehaviour
             }
 
             //HACIA LA DERECHA
-            if ((direction.y < 0.5 && direction.y > -0.5) && (direction.x > 0))
+            if ((direction.y < 0.5 && direction.y > -0.5) && (direction.x > 0 && direction.x < 1))
             {
                 animator.SetBool("LEFT_CHASE", false);
                 animator.SetBool("UP_CHASE", false);

@@ -92,7 +92,7 @@ public class FOWMesh_Sam : MonoBehaviour
         //Cambio de modo
         if(fow.samurai.chasing == true || fow.samurai.patrolling==false)
         {
-            GetComponentInParent<MeshRenderer>().material = redCone;ç
+            GetComponentInParent<MeshRenderer>().material = redCone;
         }
 
         if(fow.samurai.patrolling == true)

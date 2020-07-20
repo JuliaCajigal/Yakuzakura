@@ -179,6 +179,7 @@ public class Orbit : MonoBehaviour
         //RAMEN-BOSS
         if(collision.gameObject.tag == "ramen")
         {
+            myAudio.PlayOneShot(ramenSound);
             if (Player.health1 <= 70)
             {
                 Player.health1 += 30;

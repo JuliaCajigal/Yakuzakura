@@ -22,6 +22,8 @@ public class Boss : MonoBehaviour
     public AudioSource mySpeaker;
     public AudioClip bossHit;
     public AudioClip stamp;
+    public AudioClip throwSound;
+
 
     System.Random rnd = new System.Random();
     int numRnd;
@@ -186,5 +188,11 @@ public class Boss : MonoBehaviour
     public void MakeStampSound()
     {
         mySpeaker.PlayOneShot(stamp);
+    }
+
+    //Sonido lanzar objetos
+    public void MakeThrowSound()
+    {
+        mySpeaker.PlayOneShot(throwSound);
     }
 }

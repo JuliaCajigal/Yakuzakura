@@ -18,6 +18,7 @@ public class FOWMesh : MonoBehaviour
 
     void Start()
     {
+        //Malla y campo de visión
         mesh = GetComponent<MeshFilter>().mesh;
         fow = GetComponentInParent<FOW>();
 
@@ -26,10 +27,11 @@ public class FOWMesh : MonoBehaviour
  
     void LateUpdate()
     {
+        //Creación de la malla que fomra el cono de visión, su superposiciónn indicará que el jugador es visible
         MakeMesh();
-
     }
 
+    //Creamos un cono de visión, obviamos los objetos que se interponen en el raycast desde la posición del enemigo hacia su frente
     void MakeMesh()
     {
         stepCount = Mathf.RoundToInt(fow.viewAngle * meshRes);
@@ -44,6 +46,8 @@ public class FOWMesh : MonoBehaviour
             float angle = fow.transform.eulerAngles.y - fow.viewAngle / 2 + stepAngle * i;
             Vector3 dir = fow.DirFromAngle(angle, false);
             hit = Physics2D.Raycast(fow.transform.position, dir, fow.viewRadius, fow.obstacleMask);
+
+            //Se añadirá colisión con objeto si el raycast se encuentra algún obstáculo
             if(hit.collider == null)
             {
                 viewVertex.Add(transform.position + dir.normalized * fow.viewRadius);
@@ -54,6 +58,7 @@ public class FOWMesh : MonoBehaviour
             }
         }
 
+       //Con los vértices obtenidos en el raycast creamos nuestra malla
         int vertexCount = viewVertex.Count + 1;
 
         vertices = new Vector3[vertexCount];
@@ -85,10 +90,10 @@ public class FOWMesh : MonoBehaviour
 
     private void Update()
     {
+        //Cambio modo 
         if(fow.shooter.shooting == true)
         {
             GetComponentInParent<MeshRenderer>().material = redCone;
-
         }
 
         if(fow.shooter.patrolling == true)

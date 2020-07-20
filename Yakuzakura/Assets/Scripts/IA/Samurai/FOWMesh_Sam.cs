@@ -15,22 +15,22 @@ public class FOWMesh_Sam : MonoBehaviour
     public Material greenCone;
 
 
-
-
     void Start()
     {
+        //Malla y campo de visión
         mesh = GetComponent<MeshFilter>().mesh;
         fow = GetComponentInParent<FOW_Sam>();
-
     }
 
  
     void LateUpdate()
     {
+        //Creación de la malla que fomra el cono de visión, su superposiciónn indicará que el jugador es visible
         MakeMesh();
 
     }
 
+    //Creamos un cono de visión, obviamos los objetos que se interponen en el raycast desde la posición del enemigo hacia su frente
     void MakeMesh()
     {
         stepCount = Mathf.RoundToInt(fow.viewAngle * meshRes);
@@ -40,13 +40,11 @@ public class FOWMesh_Sam : MonoBehaviour
 
         hit = new RaycastHit2D();
 
+        //Se añadirá colisión con objeto si el raycast se encuentra algún obstáculo
         for (int i = 0; i <= stepCount; i ++)
         {
             float angle = (fow.transform.eulerAngles.y - fow.viewAngle / 2 + stepAngle * i) + 90;
             Vector3 dir = fow.DirFromAngle(angle, false);
-
-
-
 
             hit = Physics2D.Raycast(fow.transform.position, dir, fow.viewRadius, fow.obstacleMask);
             if(hit.collider == null)
@@ -59,6 +57,7 @@ public class FOWMesh_Sam : MonoBehaviour
             }
         }
 
+        //Con los vértices obtenidos en el raycast creamos nuestra malla
         int vertexCount = viewVertex.Count + 1;
 
         vertices = new Vector3[vertexCount];
@@ -90,11 +89,10 @@ public class FOWMesh_Sam : MonoBehaviour
 
     private void Update()
     {
-        
+        //Cambio de modo
         if(fow.samurai.chasing == true || fow.samurai.patrolling==false)
         {
-            GetComponentInParent<MeshRenderer>().material = redCone;
-
+            GetComponentInParent<MeshRenderer>().material = redCone;ç
         }
 
         if(fow.samurai.patrolling == true)

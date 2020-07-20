@@ -19,37 +19,47 @@ public class FOW_Sam : MonoBehaviour
 
     private void Start()
     {
-
+        //Referencia a enemigo
         samurai = GetComponentInChildren<SamuraiBehaviour>();
     }
 
     void FixedUpdate()
     {
+        //Encontrar jugadores visibles
         FindVisiblePlayer();
     }
 
     void FindVisiblePlayer()
     {
-       playerInRadius = Physics2D.OverlapCircleAll(transform.position , viewRadius);
+        //Busca los jugadores que se encuentran en un radio dado
+        playerInRadius = Physics2D.OverlapCircleAll(transform.position , viewRadius);
 
         visiblePlayer.Clear();
 
-        for(int i = 0; i<playerInRadius.Length; i++)
+        //Vamos iterando sobre los pj encontrados en dicho radio
+        for (int i = 0; i<playerInRadius.Length; i++)
         {
+            //Comprobamos la dirección del enemigo con el jugador
             Transform player = playerInRadius[i].transform;
             Vector2 dirPlayer = new Vector2((player.position.x - transform.position.x) + 1, (player.position.y - transform.position.y) + 1);
+
+            //Rotamos al jugador, ya que aparecía desfasado
             dirPlayer = Rotate(dirPlayer, -90);
 
-            if(Vector2.Angle(dirPlayer, transform.right) < viewAngle/2)
+            //Si es menor que el radio de visión entonces es sensible de ser detectado
+            if (Vector2.Angle(dirPlayer, transform.right) < viewAngle/2)
             {
+                //Calculamos que la distancia con el jugador
                 float distancePlayer = Vector2.Distance(transform.position, player.position);
 
-                if(!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer,enemiesMask) && !Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
+                //Y finalmente comprobamos si se superpone con la máscara de enemigos y de obstáculos, para permitirnos ocultarnos trás un objeto o una pared
+                if (!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer,enemiesMask) && !Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
                 {
                     visiblePlayer.Add(player);
-                    if(playerInRadius[i].gameObject.tag=="Player1" || playerInRadius[i].gameObject.tag == "Player2")
-                    {
 
+                    //Si coincide el tag con el de los jugadores, el enemigo pasará a modo perseguir
+                    if (playerInRadius[i].gameObject.tag=="Player1" || playerInRadius[i].gameObject.tag == "Player2")
+                    {
                         samurai.patrolling = false;
                         samurai.chasing = true;
                     }
@@ -71,6 +81,7 @@ public class FOW_Sam : MonoBehaviour
     }
 
   
+    //Método para rotar cono de visión 90º
    public Vector2 Rotate(Vector2 v, float degrees)
         {
             float sin = Mathf.Sin(degrees * Mathf.Deg2Rad);

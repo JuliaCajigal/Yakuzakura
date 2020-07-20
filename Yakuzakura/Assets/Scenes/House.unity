@@ -30908,7 +30908,7 @@ MonoBehaviour:
   numObj_cel: 10
   numEneF_cel: 2
   numEneS_cel: 2
-  numEneSam_cel: 1
+  numEneSam_cel: 0
   enemy_follow: {fileID: 7337775662572762588, guid: e434e8894ca03ee48b4b5b983cf8539a,
     type: 3}
   enemy_shooter: {fileID: 2354879150284450084, guid: c2b28211018bd2441a0cca5d99f8a19e,

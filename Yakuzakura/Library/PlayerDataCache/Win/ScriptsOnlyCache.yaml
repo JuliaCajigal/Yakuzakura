@@ -72,7 +72,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -1718,4 +1717,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/intro.unity
   - Assets/Scenes/Win.unity
   - Assets/Scenes/Credits.unity
-  playerPath: C:/Users/Raul/Desktop/Builds/Yakuzakura.exe
+  playerPath: C:/Users/Raul/Desktop/build/Yakuzakura.exe

@@ -31197,8 +31197,8 @@ MonoBehaviour:
   tile_door_dw_w: {fileID: 11400000, guid: 3455f503f56d08946bcf7161ff9f640f, type: 2}
   numObj_cel: 10
   numEneF_cel: 2
-  numEneS_cel: 2
-  numEneSam_cel: 0
+  numEneS_cel: 1
+  numEneSam_cel: 1
   enemy_follow: {fileID: 1782921717511798492, guid: cb52a2c51cabc3543a6988b25312429c,
     type: 3}
   enemy_shooter: {fileID: 5527036531987053794, guid: a9ade519ee298d7459498711114e7ea0,

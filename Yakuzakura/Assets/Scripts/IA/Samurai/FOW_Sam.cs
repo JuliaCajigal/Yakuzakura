@@ -44,7 +44,7 @@ public class FOW_Sam : MonoBehaviour
             {
                 float distancePlayer = Vector2.Distance(transform.position, player.position);
 
-                if(!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer,enemiesMask))
+                if(!Physics2D.Raycast(transform.position, dirPlayer, distancePlayer,enemiesMask) && !Physics2D.Raycast(transform.position, dirPlayer, distancePlayer, obstacleMask))
                 {
                     visiblePlayer.Add(player);
                     if(playerInRadius[i].gameObject.tag=="Player1" || playerInRadius[i].gameObject.tag == "Player2")

@@ -49,7 +49,6 @@ public class ShooterBehaviour : MonoBehaviour
 
             Vector3 direction = this.transform.position - player.transform.position;
             var distance = direction.magnitude;
-            Debug.Log(distance);
             if(distance >= 10)
             {
                 shooting = false;

@@ -8,6 +8,7 @@ public class Deadpixel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioListener.volume = 0.4f;
         StartCoroutine("CambiarNivel");
     }
 

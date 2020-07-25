@@ -7149,7 +7149,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -39980,6 +39980,31 @@ PrefabInstance:
       propertyPath: score2
       value: 
       objectReference: {fileID: 202247604}
+    - target: {fileID: 5259713367119283287, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.49188614
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713367119283287, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.025974274
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713367119283287, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_Parameters.alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713367119283287, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713367119283287, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5259713367414145764, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
         type: 3}
       propertyPath: m_Layer
@@ -40084,6 +40109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259713368166011534, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bb83a21cb7ae1c4ea6b435e3f602e59, type: 3}

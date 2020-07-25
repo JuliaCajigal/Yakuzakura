@@ -35,7 +35,7 @@ public class bullet : MonoBehaviour
     {
         if (explode == false)
         {
-            if (collision.gameObject.tag != "EnemyShooter")
+            if (collision.gameObject.tag != "EnemyShooter" && collision.gameObject.tag != "EnemyFollower")
             {
                 Debug.Log(collision.gameObject.tag);
                 explode = true;
@@ -69,7 +69,7 @@ public class bullet : MonoBehaviour
         //Movimiento hacia el personaje
         moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
-        Destroy(gameObject, 3f);
+
 
 
         //Rotacion hacia el personaje
